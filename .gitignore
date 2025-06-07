@@ -1,3 +1,6 @@
 *
 
 !.gitignore
+
+!execute_scripts/
+!execute_scripts/**
