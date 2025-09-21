@@ -141,7 +141,6 @@ fisherGsea_2_MA <- function(
   cores = 1,
   lambda = 0){
   
-
   list.of.packages <- c("reshape2", "fdrtool", "parallel", 
                         "vegan", "qvalue")
   suppressMessages(lapply(list.of.packages, require, character.only = TRUE))
@@ -274,8 +273,10 @@ fisherGsea_2_MA <- function(
     # in the original format: match(z$reference, geneMetaSets[[metaSet]]$metadata$name), ]) 
     # the 'comma' led to 'uncorrect dimentions error' ; probably because geneMetaSets is a list, I erased the comma
     
+    geneMetaSets[[metaSet]]$metadata = as.data.table(geneMetaSets[[metaSet]]$metadata)
     z = cbind(z, geneMetaSets[[metaSet]]$metadata[match(z$Reference, 
                                                         geneMetaSets[[metaSet]]$metadata$name)])
+
     z$name = NULL
     
     z$TWASgenes <- name.of.TWAS.genes

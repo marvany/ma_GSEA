@@ -1,5 +1,5 @@
-source("/hpc/users/anyfam01/Global.Scripts/060725_helper_Global.Source.R")
-source("/sc/arion/projects/va-biobank/marios/Clinical.Significance/Scripts/060725_helper_GSEA_ORplot_Functions")
+source("/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/060725_helper_Global.Source.R")
+source("/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/060725_helper_GSEA_ORplot_Functions.R")
 library(ggplot2, lib.loc = "/sc/arion/projects/roussp01a/sanan/Rlibs/231221_R_4.2.0_MultiWAS")
 library(ggplot2)
 library(scales)
@@ -17,24 +17,75 @@ main.dir <- "/sc/arion/projects/roussp01a/sanan/230420_TWAS_companionPipelines/c
 outdir = 'classic'
 bulk.filter.coding = TRUE
 tw.fdr = FALSE
+bulk_format = 'csv'
 
 # revisions
 main.dir <- "/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/Resources/250402_allEUR_revisions/"
 outdir = 'revisions'
 bulk.filter.coding = FALSE
 tw.fdr = FALSE
+bulk_format = 'csv'
 
 # revisions coding
 main.dir <- "/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/Resources/250402_allEUR_revisions_CODING/"
 outdir = 'revisions_coding'
 bulk.filter.coding = TRUE
 tw.fdr = FALSE
+bulk_format = 'csv'
 
 # 7 june 2025 revision
 main.dir = "/sc/arion/projects/roussp01a/sanan/230420_TWAS_companionPipelines/combinationAnalyses/stackTWAS_V2/output/250602_allEUR_revisions_PLOT/"
 outdir = '060725_revision'
 bulk.filter.coding = FALSE
 tw.fdr = TRUE
+bulk_format = 'csv'
+
+# 7 june 2025 revision
+main.dir = "/sc/arion/projects/roussp01a/sanan/230420_TWAS_companionPipelines/combinationAnalyses/stackTWAS_V2/output/250602_allEUR_revisions_PLOT/" # for non-bulk tissues
+outdir = '060725_revision'
+bulk.filter.coding = FALSE
+tw.fdr = TRUE
+bulk_format = 'csv'
+
+# 16 September 2025 revision: TW coding
+main.dir = "/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/Resources/TW/laptop_to_minerva/TW_mod_processCols/coding" # for non-bulk tissues
+p.bulk = "/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/Resources/TW/laptop_to_minerva/TW_mod_bulk_processCols/coding"
+outdir = '091625_revision/tw_coding'
+bulk.filter.coding = FALSE
+tw.fdr = FALSE
+tw.mapped = TRUE  # tw.mapped means that fdr column is already TW_FDR
+tw.bulk.fdr = TRUE
+bulk_format = 'csv'
+tw2.fdr = FALSE
+
+# 16 September 2025 revision: TW noncoding
+main.dir = "/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/Resources/TW/laptop_to_minerva/TW_mod_processCols/noncoding" # for non-bulk tissues
+p.bulk = "/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/Resources/TW/laptop_to_minerva/TW_mod_bulk_processCols/noncoding"
+outdir = '091625_revision/tw_noncoding'
+bulk.filter.coding = FALSE
+tw.fdr = FALSE
+tw.mapped = TRUE  # tw.mapped means that fdr column is already TW_FDR
+tw.bulk.fdr = TRUE
+bulk_format = 'csv'
+tw2.fdr = FALSE
+
+
+
+# 16 September 2025 revision: TW2 coding
+main.dir = "/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/Resources/TW/laptop_to_minerva/TW2_mod_processedCols" # since we are focusing on p-value it doesnt matter if choose original TW_mod
+p.bulk = "/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/Resources/TW/laptop_to_minerva/TW2_mod_bulk_processedCols/coding/bulk"
+outdir = '091625_revision/tw2_coding'
+bulk.filter.coding = TRUE
+tw.fdr = FALSE
+tw.mapped = TRUE  # tw.mapped means that fdr column is already TW_FDR
+tw.bulk.fdr = TRUE
+bulk_format = 'tsv'
+tw2.fdr = TRUE
+
+# 16 September 2025 revision: TW2 noncoding
+tw2.fdr = TRUE
+
+
 
 # DEPENDENT VARIABLES
 lists.outdir = paste0(base.outdir, "/Resources/", outdir, '/data_lists')
@@ -66,16 +117,17 @@ if(FALSE){
 ######################################################
 ####### MODIFICATION OF BULK TISSUE TWAS RESULTS
 
-p.bulk <- "/sc/arion/projects/roussp01a/sanan/230924_Various_TWAS/230926_PEC_DLPFC/output/240122_V4/data.TWAS/"
+if(FALSE) p.bulk <- "/sc/arion/projects/roussp01a/sanan/230924_Various_TWAS/230926_PEC_DLPFC/output/240122_V4/data.TWAS/"
 
-bulk.list <- read.dfs(p.bulk, acr = "csv", recursive = T)
+bulk.list <- read.dfs(p.bulk, acr = bulk_format, recursive = T)
 bulk.list <- unlist(bulk.list, recursive = F)
+
 
 bulk <- lapply(seq_along(bulk.list), function(i){
   temp <- bulk.list[[i]]
   temp <- as.data.table(temp)
   temp <- temp[temp$pred_perf_r2 >= 0.01 & temp$pred_perf_pval <= 0.05 & temp$n_snps_used > 0,]
-  
+
   temp <- temp[pred_perf_qval <= 0.05,]
   indexMHC <- filterGenesMHC(temp$gene)
   if (length(indexMHC) > 0) {
@@ -95,12 +147,31 @@ bulk <- lapply(seq_along(bulk.list), function(i){
   return(df)
 })
 
+if(tw.bulk.fdr){
+  L <- bulk 
+  for (i in seq_along(L)) {
+    dt <- L[[i]]
+    if (!data.table::is.data.table(dt)) dt <- data.table::as.data.table(dt)
+
+    if ("neg_log10p"     %in% names(dt)) dt[, p := 10^(-neg_log10p)]
+    if ("TW_fdr"         %in% names(dt) & !tw2.fdr) dt[, fdr := TW_fdr]
+    if ("TW_FDR"         %in% names(dt) & !tw2.fdr) dt[, fdr := TW_fdr]          # uppercase variant
+    if ("TW_fdr"         %in% names(dt) & tw2.fdr) dt[, fdr := TW_fdr2]
+    if ("TW_FDR"         %in% names(dt) & tw2.fdr) dt[, fdr := TW_fdr2]          # uppercase variant
+    if ("TW_bonferroni"  %in% names(dt)) dt[, bonferroni := TW_bonferroni]
+
+    L[[i]] <- dt
+  }
+}
+
+
 # for one of the revisions we use an additional filter
 coding.genes = geneAnnotation_v104_ensembl[Gene.Type == 'protein_coding',]$Ensembl.Gene.ID
 if(bulk.filter.coding){
   bulk <- lapply(seq_along(bulk), function(i){
     
     dt <- as.data.table(bulk[[i]])
+    
     dt = dt[gene %in% coding.genes]    
     
     dt
@@ -109,7 +180,7 @@ if(bulk.filter.coding){
 
 names(bulk) <- names(bulk.list)
 names(bulk) <- str_extract(names(bulk), ".*?(postImp)")
-names(bulk) <- gsub("csv.", "", names(bulk))
+names(bulk) <- gsub(paste0(bulk_format, "."), "", names(bulk))
 str(bulk)
 ## Diastayrwneis ta onomata twn TWAS pou sou edwse o Sanan me ta TWAS pou exeis.
 load("/sc/arion/projects/va-biobank/marios/Clinical.Significance/local.resources/coding_only_TWAS.genes.ID_V2.RData")
@@ -131,15 +202,30 @@ load("/sc/arion/projects/va-biobank/marios/Clinical.Significance/local.resources
 
 raw_TWAS <- raw_TWAS$tsv[names(raw_TWAS$tsv) %in% names(coding_only_TWAS.genes.ID_V2)]
 
-temp <- lapply(seq_along(raw_TWAS), function(i){
-  df = raw_TWAS[[i]]
-  df$p <- 10^(-(df$neg_log10p))
-  df$fdr <- df$pIB_fdr
-  df$bonferroni <- df$pIB_bonferroni
-  df
-})
+if(!tw.mapped){
+  temp <- lapply(seq_along(raw_TWAS), function(i){
 
-if(tw.fdr){
+    df = raw_TWAS[[i]]
+    if('neg_log10p' %in% names(df)) df$p <- 10^(-(df$neg_log10p))
+    df$fdr <- df$pIB_fdr
+    df$bonferroni <- df$pIB_bonferroni
+    df
+  })
+
+  if(tw.fdr){
+    temp <- lapply(seq_along(temp), function(i){
+      df = temp[[i]]
+      df$p <- 10^(-(df$neg_log10p))
+      df$fdr <- df$TW_fdr
+      df$bonferroni <- df$TW_bonferroni
+      df
+  })
+  }
+} else temp <- raw_TWAS
+
+
+
+if(tw2.fdr){
   temp <- lapply(seq_along(temp), function(i){
     df = temp[[i]]
     df$p <- 10^(-(df$neg_log10p))
@@ -148,6 +234,7 @@ if(tw.fdr){
     df
 })
 }
+
 for(i in seq_along(temp)){
   print(temp[[i]]$p[1:10])
 }
@@ -238,17 +325,18 @@ temp = lapply(everything_ready_TWAS_for_GSEA_preparation, function(x){
 
 names(temp) = names(everything_ready_TWAS_for_GSEA_preparation)
 everything_ready_TWAS_for_GSEA_preparation = temp
-str(everything_ready_TWAS_for_GSEA_preparation)
+str(everything_ready_TWAS_for_GSEA_preparation[1])
 
 all.TWAS.forGSEA.fisher <- prepare.for.GSEA(
   mydf = everything_ready_TWAS_for_GSEA_preparation,
   filtering.criteria = list(c("p", 0.05), c("bonferroni", 0.05), c("p", 0.01), c("fdr", 0.05), c("fdr", 0.01)),
   save.path = paste0(lists.outdir, "TWAS_Fisher_input"),  #/multiple.TWAS.Combinations/ma.TWAS_corrected_BULK_V1", # has the last results 
-  only.aggregates = T
+  only.aggregates = T, 
+  alternative_tissues = TRUE # FOR THE TW impementation
 )
 
-str(all.TWAS.forGSEA.fisher)
-
+str(all.TWAS.forGSEA.fisher[[1]])
+all.TWAS.forGSEA.fisher[[1]][[1]]
 ready_for_Fisher_analysis_TWAS_list <- all.TWAS.forGSEA.fisher
 
 save(ready_for_Fisher_analysis_TWAS_list, file = paste0(lists.outdir, "/ready_for_Fisher_analysis_TWAS_list.RData"))
@@ -273,9 +361,14 @@ sapply(ready_for_Fisher_analysis_TWAS_list, function(x){
 
 if(!dir.exists(gsea.path)) dir.create(gsea.path, recursive = TRUE)
 
+names(ready_for_Fisher_analysis_TWAS_list)
+#input_lists = ready_for_Fisher_analysis_TWAS_list["data_listsTWAS_Fisher_input_fdr_0.05_MIXED"]
+
+input_lists = ready_for_Fisher_analysis_TWAS_list["data_listsTWAS_Fisher_input_p_0.01_MIXED"]
+input_lists = ready_for_Fisher_analysis_TWAS_list[3]
 
 multi3_wrapper(
-  twas.list = ready_for_Fisher_analysis_TWAS_list[3], #for NO_focus   #####all.TWAS.forGSEA.fisher #for FOCUS,
+  twas.list = input_lists, #for NO_focus   #####all.TWAS.forGSEA.fisher #for FOCUS,
   backgrounds = list(NULL), #for NO_focus ####list(Imputable.Genes.NO.BULK, NULL) #for FOCUS,   # please do not name the elements included in this list
   gsea.path = gsea.path, # all_combinations_TWAS_GSEA_fisher_V3 uses protein specific background for Bulk and has improved aesthetics
   validation = Validation.Gene.List,

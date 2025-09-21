@@ -124,7 +124,8 @@ prepare.for.GSEA <- function(
     save.path,
     #only All Class, All subclass, Bulk, pseudobulk, all class + subclass
     only.aggregates = T,
-    Focus= F){
+    Focus= F,
+    alternative_tissues = FALSE){
   
   # This list will be exported as the final list that contains all the TWAS combinations
   all.TWAS.combs <- list()
@@ -158,12 +159,172 @@ prepare.for.GSEA <- function(
       
       if(!Focus) keys <- c("\\bSubclass\\b", "\\bClass\\b", "Pseudobulk", "Bulk")
       if(Focus) keys <- c("\\bSubclass\\b", "\\bClass\\b", "Pseudobulk")
+      if(alternative_tissues) keys <- c("_subclass_", "_class_", "superClass_bulk", "Bulk")
+      ### final list contains everything and it is readily availabe to be used as input in the GSEA Fisher pipeline.
+      semifinal.list <- pbmcapply::pbmclapply(
+        mydf, 
+        mc.cores = parallel::detectCores() -2,
+        function(df){
+            df <- as.data.table(df)
+            mylist <- lapply(keys, function(name){
+              patterns <- grep(name, unique(mydf[[1]]$tissue), value = T)
+              genes <- sapply(patterns, function(i){
+                df[tissue == i]$gene
+              })
+              if(length(patterns) == 1) {
+                temp <- list()
+                temp[[name]] <- genes
+                return(temp)
+              }
+              return(genes)
+            })
+            mylist <- unlist(mylist, recursive = F)
+            starting.length = length(mylist)
+            if(!alternative_tissues){
+              mylist[["All EUR Class"]] <- unname(unlist(mylist[grep("\\bClass", names(mylist), ignore.case = T)]))
+              mylist[["All EUR Subclass"]] <- unname(unlist(mylist[grep("subclass", names(mylist), ignore.case = T)]))
+              mylist[["All EUR Class + Subclass"]] <- c(mylist[["All EUR Class"]], mylist[["All EUR Subclass"]])
+              mylist[["sn-Pseudohomogenate"]] <- unname(unlist(mylist[grep("Pseudobulk", names(mylist), ignore.case = T)]))
+            } else{
+              mylist[["All EUR Class"]] <- unname(unlist(mylist[grep("_class_", names(mylist), ignore.case = T)]))
+              mylist[["All EUR Subclass"]] <- unname(unlist(mylist[grep("_subclass_", names(mylist), ignore.case = T)]))
+              mylist[["All EUR Class + Subclass"]] <- c(mylist[["All EUR Class"]], mylist[["All EUR Subclass"]])
+              mylist[["sn-Pseudohomogenate"]] <- unname(unlist(mylist[grep("superClass_bulk", names(mylist), ignore.case = T)]))
+            }
+            # this is to avoid the bulk overlap
+            if(!alternative_tissues){
+              mylist[["All EUR Subclass"]] <- c(mylist[["All EUR Subclass"]], mylist$`EUR Class-OPC`, mylist$`EUR Class-Astro`, mylist$`EUR Class-Endo`, mylist$`EUR Class-Oligo`)
+            } else {
+            mylist[["All EUR Subclass"]] <- c(mylist[["All EUR Subclass"]], 
+                mylist[["230721_MegaAnalysis_EUR_class_OPC_prediXcan_noprior_alpha0.5_window1e6_filtered.db"]], 
+                mylist[["230721_MegaAnalysis_EUR_class_Astro_prediXcan_noprior_alpha0.5_window1e6_filtered.db"]], 
+                mylist[["230721_MegaAnalysis_EUR_class_Endo_prediXcan_noprior_alpha0.5_window1e6_filtered.db"]], 
+                mylist[["230721_MegaAnalysis_EUR_class_Oligo_prediXcan_noprior_alpha0.5_window1e6_filtered.db"]])    
+            }
+
+            if(!Focus) mylist[["Bulk"]] <- unname(unlist(mylist[grep("Bulk", names(mylist), ignore.case = F)]))
+            
+            if(only.aggregates) mylist <- mylist[-c(1:(starting.length - 1))]
+            
+            return(mylist)
+      })
+
+      ######################################################################### 
+      ######################### This last step is to create the final format.
+      final.list <- list()
+      if(protein){
+        for(i in seq_along(semifinal.list)){
+          #name <- names(semifinal.list)[i]
+          final.list[[i]] <- unique(only.protein.coding(semifinal.list[[i]], "ENSEMBL", "ENSEMBL"))
+        }
+      }else{ # list will contain coding only
+        for(i in seq_along(semifinal.list)){
+          final.list[[i]] <- unique(semifinal.list[[i]])
+        }
+      }
+      names(final.list) <- names(semifinal.list)
+      
+      
+      if(protein){
+        final.list <- lapply(semifinal.list, function(trait){
+          sapply(trait, function(tissue){
+            tissue <- unique(only.protein.coding(tissue, "ENSEMBL", "ENSEMBL"))
+            tissue
+          })
+        })
+      }else{
+        final.list <- lapply(semifinal.list, function(trait){
+          sapply(trait, function(tissue){
+            tissue <- unique(tissue)
+            tissue
+          })
+        })
+      }
+      
+      
+      #View(final.list)
+      
+      # Export
+      mydata <- final.list
+      #output
+      save(mydata, file = output)
+      #save(as.symbol(file.name), file = output)
+      cat(output, "\n")
+      
+      # Save results in a list, on which GSEA_fisher will iterate
+      name <- gsub(".RData", "", str_extract(output, "[^/]*.RData"))
+      all.TWAS.combs[[name]] <- final.list
+      
+    }
+    return(all.TWAS.combs)
+  })
+  # c(T,F) in lapply produce two lists, having 1 big list is what you need
+  all.TWAS.combs <- unlist(all.TWAS.combs, recursive = F)
+  
+  # This exports and returns the list that contains all the combinations of TWAS criteria
+  output = paste(save.path, "all.TWAS.combs.RData", sep = "_")
+  save(all.TWAS.combs, file = output)
+  cat("all.TWAS.combs can be found in this directory:", output)
+  
+  return(all.TWAS.combs)
+}
+
+
+prepare.for.GSEA <- function(
+    mydf,
+    filtering.criteria = list(c("p", 0.05), c("bonferroni", 0.05), c("p", 0.01), c("fdr", 0.05), c("fdr", 0.01)),
+    save.path,
+    #only All Class, All subclass, Bulk, pseudobulk, all class + subclass
+    only.aggregates = T,
+    Focus= F){
+  
+  # This list will be exported as the final list that contains all the TWAS combinations
+  all.TWAS.combs <- list()
+  # In each iteration we want mydf will be loaded from mydf.backup so that each iteration gets the original file.
+  mydf.backup = mydf
+  all.TWAS.combs <- lapply(list(T,F), function(protein){
+    if(protein) message("Setting argument 'protein' to TRUE") else message("Setting argument 'protein' to FALSE")
+    for(i in seq_along(filtering.criteria)){
+      
+      mydf <- mydf.backup
+      
+      ######################## Filter ##########################
+      
+      input <- filtering.criteria[[i]]
+      
+      message("Running for ", input)
+      
+      # parse pieces safely (fixes "0.05" being character)
+      col <- as.character(if (is.list(input)) input[[1]] else input[1])
+      thr <- as.numeric(if (is.list(input)) input[[2]] else input[2])
+
+      # build output name with numeric threshold
+      if (protein) {
+        output <- paste(save.path, col, thr, "PROTEIN.RData", sep = "_")
+      } else {
+        output <- paste(save.path, col, thr, "MIXED.RData",   sep = "_")
+      }
+
+      # filter each df using data.table syntax
+      mydf <- lapply(mydf, function(df) {
+        df <- data.table::as.data.table(df)
+        df[get(col) < thr]
+      })
+      ###################### prepare data for Sanan's project ######################
+      # This is to avoid the Pseudobulk / Bulk overlap
+      mydf <- lapply(mydf, function(df){
+        df <- as.data.table(df)
+        df[tissue == "EUR Pseudobulk Bulk", tissue := "Pseudobulk"]
+      })
+      
+      if(!Focus) keys <- c("\\bSubclass\\b", "\\bClass\\b", "Pseudobulk", "Bulk")
+      if(Focus) keys <- c("\\bSubclass\\b", "\\bClass\\b", "Pseudobulk")
       
       ### final list contains everything and it is readily availabe to be used as input in the GSEA Fisher pipeline.
       semifinal.list <- pbmcapply::pbmclapply(mydf, function(df){
         df <- as.data.table(df)
         mylist <- lapply(keys, function(name){
-          patterns <- grep(name, unique(mydf[[1]]$tissue), value = T)
+          patterns <- grep(name, unique(df$tissue), value = TRUE)
           genes <- sapply(patterns, function(i){
             df[tissue == i]$gene
           })
@@ -249,6 +410,9 @@ prepare.for.GSEA <- function(
   
   return(all.TWAS.combs)
 }
+
+
+
 
 
 create_tissue_paths <- function(

@@ -1,9 +1,12 @@
+
+
 #############################################################################
 # THIS SCRIPT IS THE FINAL PIPELINE, ITS PATH IS AT THE HOME/GLOBAL.SCRIPTS #
-source("/hpc/users/anyfam01/Global.Scripts/Global.Source.R")
-source("/sc/arion/projects/va-biobank/marios/Clinical.Significance/Scripts/GSEA_ORplot_Functions.R")
-
+source("/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/060725_helper_Global.Source.R")
+source("/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/060725_helper_GSEA_ORplot_Functions.R")
 library(ggplot2)
+
+
 
 meta.vs.nometa = "no_meta"
 gwas.paths.list <- list(SCZ = "/sc/arion/projects/roussp01b/rachel/psychAD/work_data/disease_specific_without_meta_analysis_with_RUSH/RUSH_incl_no_meta_scz_SCZ_PRS_QDA",
@@ -17,18 +20,18 @@ gwas.paths.list <- list(SCZ = "/sc/arion/projects/roussp01b/rachel/psychAD/work_
 #######################
 # FOR RACHEL FINAL
 setwd('/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/rachel_GSEA')
-path_to_RUSH = paste0(getwd(), '/Resources/genes')
+path_to_RUSH = paste0(getwd(), '/Resources/250904_genes')
 
 meta.vs.nometa = "no_meta"
-gwas.paths.list <- list(SCZ = paste0(path_to_RUSH, '/RUSH_incl_no_meta_control_SCZ_PRS_QDA'),
-                        AD = paste0(path_to_RUSH, '/RUSH_incl_no_meta_control_AD_PRS_QDA'),
-                        #PD = paste0(path_to_RUSH, '/RUSH_incl_no_meta_control_SCZ_PRS_QDA'),
-                        BD = paste0(path_to_RUSH, '/RUSH_incl_no_meta_control_BIP_PRS_QDA'))
+gwas.paths.list <- list(SCZ = paste0(path_to_RUSH, '/SCZ_case_SCZ_PGS'),
+                        AD = paste0(path_to_RUSH, '/AD_case_AD_PGS'),
+                        PD = paste0(path_to_RUSH, '/PD_case_PD_PGS'),
+                        BD = paste0(path_to_RUSH, '/BD_case_BD_PGS'))
 
 gene.symbol.column = "gene_id"  # MODIFY IF THE TABLE DOESN'T CONTAIN SYMBOL NAMES
 p.value.column = "p_value" #"mssm_p_value",
 z.score.column = "z_score"
-
+p.export = '/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/rachel_GSEA/Results_250905'
 # p_value is defined by user, the rest are default because you create them inside ma.prepare.for.camera_2
 thresh_annot <- expand.grid(threshold = c("0.05", "0.01"), metric = c("pvalue", "fdr", "bonferroni"))
 
@@ -110,7 +113,15 @@ p.export = '/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/sanan_mgi_GSEA'
 
 ##############################################################
 ############## This is to normalise column names #############
-source(paste0(path.to.scripts, "/source_camera.for.all.R"))
+source('/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/060725_helper_camera.for.all.R')
+
+
+# LATEST RELEASE FOR FASTER GENE ENSEMBL LOADING
+gwaslist <- ma.prepare.for.camera_4(paths.list = gwas.paths.list, # expects list as input
+                                    gene_symbol_col = gene.symbol.column,
+                                    p.value.col = p.value.column, 
+                                    z.score.col = z.score.column,
+                                    return_dataframe = F)
 
 gwaslist <- ma.prepare.for.camera_2(paths.list = gwas.paths.list, # expects list as input
                                     gene_symbol_col = gene.symbol.column,
@@ -128,112 +139,6 @@ gwaslist <- ma.prepare.for.camera_3(paths.list = gwas.paths.list, # expects list
                                     return_dataframe = F,
                                     convert.to.ensembl = F)
 
-
-ma.prepare.for.camera_3 <- function(paths.list, 
-                                    gene_symbol_col, 
-                                    ensembl.ID.col, 
-                                    p.value.col, 
-                                    z.score.col,
-                                    fdr.column = NA,
-                                    bonferroni.column = NA,
-                                    feature.column = NA,
-                                    return_dataframe = TRUE,
-                                    convert.to.ensembl) {
-  #browser()
-  # Load required libraries if not already loaded
-  if (!requireNamespace("data.table", quietly = TRUE)) {
-    install.packages("data.table")
-  }
-  if (!requireNamespace("pbmcapply", quietly = TRUE)) {
-    install.packages("pbmcapply")
-  }
-  library(data.table)
-  library(pbmcapply)
-  names(gwas.paths.list)
-  # For each gwas path, create a dataframe for all tissues ready to be used for camera
-  mylist <- pbmcapply::pbmclapply(names(paths.list), function(name) {
-    
-    # Get paths for this GWAS
-    file_path <- paths.list[[name]]
-    
-    # Import files using fread instead of read.dfs
-    myfile <- fread(file_path)
-    
-    # Change names of the dfs that correspond to each tissue
-    #names(myfile) <- gsub(".csv|csv.EUR_|csv.class_|_work_files_.*", "", basename(file_path))
-    ########### SPASE TO LAPPLY()/////ASDGFASDF
-    # Prepare data for camera, ready_files = list of ready dfs, each df = a tissue
-    dt <- as.data.table(myfile)
-    
-
-   all.dfs <- rbindlist(pbmcapply::pbmclapply(unique(dt$tissue), function(this.tissue) {
-
-      df <- dt[tissue == this.tissue]
-
-      # Create required columns
-      df$pvalue <- df[[p.value.col]]
-      df$gene_name <- df[[gene_symbol_col]]
-      
-      # Calculate FDR if not provided
-      if (!is.na(fdr.column)) {
-        df$fdr <- df[[fdr.column]] 
-      } else {
-        df$fdr <- p.adjust(df$pvalue, method = 'BH')
-      }
-      
-      # Calculate Bonferroni if not provided
-      if (!is.na(bonferroni.column)) {
-        df$bonferroni <- df[[bonferroni.column]] 
-      } else {
-        df$bonferroni <- p.adjust(df$pvalue, method = 'bonferroni')
-      }
-      
-      # Convert gene symbols to Ensembl IDs
-      if(is.na(feature.column)){
-          if(!is.na(gene.symbol.column)){
-            df$feature <- unname(unlist(sapply(df[[gene.symbol.column]], function(x) {
-            x <- toupper(x)
-            ensID <- gene.symbol.to.ensembl(x, conversion = "symbol->ENSEMBL", GV.table = FALSE)
-            if (ensID == 'character(0)') return(NA)
-            return(ensID)
-          })))
-        } else stop("Both gene and feature columns are NA, exiting")
-      } else{
-        df$feature <- df[[feature.column]]
-      }
-      
-      df$gene <- df$feature
-      
-      # Set gene column to feature
-      
-      df$zscore <- df[[z.score.col]]
-      df$gwas <- name
-      df$model_ID <- this.tissue
-      
-      # Select only the columns we need
-      df <- df[, c('gene', 'feature', 'zscore', 'pvalue', 'fdr', 'bonferroni', 'gwas', 'model_ID')]
-      
-      return(df)
-    }, mc.cores = parallel::detectCores() - 2))
-    
-
-    return(all.dfs)
-  }, mc.cores = parallel::detectCores() -2)
-  
-  names(mylist) <- names(paths.list)
-  
-  if (return_dataframe) {
-    # Using dplyr's bind_rows for consistency with original function
-    if (!requireNamespace("dplyr", quietly = TRUE)) {
-      install.packages("dplyr")
-    }
-    library(dplyr)
-    mydf <- dplyr::bind_rows(mylist)
-    return(mydf)
-  } else {
-    return(mylist)
-  }
-}
 
 
 temp <- lapply(gwaslist, function(mydf){
@@ -255,18 +160,18 @@ str(sanans.gwaslist[1])
 
 #gwaslist <- temp
 
-if(!dir.exists(paste0(p.export, '/Results'))) dir.create(paste0(p.export, "/Results"))
+if(!dir.exists(p.export)) dir.create(p.export)
 
-save(gwaslist, file = paste0(p.export, "/Results/gwaslist.RData"))
+save(gwaslist, file = paste0(p.export, "/gwaslist.RData"))
 
 
 
 ##########################################
 ############# CHECKPOINT 1 ###############
 
-load(paste0(p.export, "/Results/gwaslist.RData"))
-source("/sc/arion/projects/va-biobank/marios/Clinical.Significance/Scripts/GSEA_ORplot_Functions.R")
-source("/hpc/users/anyfam01/Global.Scripts/Global.Source.R")
+load(paste0(p.export, "/gwaslist.RData"))
+source("/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/060725_helper_GSEA_ORplot_Functions.R")
+source("/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/060725_helper_Global.Source.R")
 library(ggplot2)
 
 
@@ -292,7 +197,7 @@ names(mylist) <- sapply(1:nrow(thresh_annot), function(i) paste(rev(unlist(thres
 str(mylist)
 
 # keep 0.05 , 0.01
-#mylist <- mylist[1]
+mylist <- mylist[c(1,2)]
 
 # This part checks for NA values
 invisible(
@@ -357,8 +262,8 @@ mylist = temp
 ####################################################
 ##################  Run Fisher  ####################
 
-source("/sc/arion/projects/va-biobank/marios/Clinical.Significance/Scripts/GSEA_ORplot_Functions.R")
-source(paste0(path.to.scripts, "/source_camera.for.all.R"))
+source("/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/060725_helper_GSEA_ORplot_Functions.R")
+source("/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/060725_helper_Global.Source.R")
 
 ##############################################
 ################### FISHER ###################
@@ -371,8 +276,9 @@ if(FALSE) twas.list = sanan.twas.list
 
 
 background = MultiWAS::greatGenes #for NO_focus ####list(Imputable.Genes.NO.BULK, NULL) #for FOCUS,   # please do not name the elements included in this list
-gsea.path = paste0(p.export, "/Results/all_traits_V6") # all_combinations_TWAS_GSEA_fisher_V3 uses protein specific background for Bulk and has improved aesthetics
-gsea.path = paste0(p.export,"/Results/fisher/MGIPhenotypes_v5_protein_coding")
+#gsea.path = paste0(p.export, "/all_traits_V6") # all_combinations_TWAS_GSEA_fisher_V3 uses protein specific background for Bulk and has improved aesthetics
+#gsea.path = paste0(p.export,"/fisher/MGIPhenotypes_v5_protein_coding")
+gsea.path = file.path(p.export)
 Validation_Genesets = mySets$standardGeneSets[c("syngoAll", "msigdbSetsPruned")] # Validation.Gene.List
 Validation_Genesets = list(MGIPhenotypes = MultiWAS::standardGeneSets$MGIPhenotypes)
 
@@ -386,40 +292,49 @@ if(!dir.exists(p.all.plots)) dir.create(p.all.plots, recursive = T)
 
 
 # Top level - pval_name
-pbmcapply::pbmclapply(names(twas.list), function(pval_name) {
-  # pvalue level
-  pval_level <- twas.list[[pval_name]]
-  this_gsea_path <- paste0(gsea.path, "/", pval_name)
-  
-  # Second level - trait_name
-  pbmcapply::pbmclapply(names(pval_level), function(trait_name) {
-    # trait level
-    thistrait <- pval_level[[trait_name]]
-    trait_gsea_path <- paste0(this_gsea_path, "/", trait_name)
+pbmcapply::pbmclapply(
+  names(twas.list), 
+  mc.cores = parallel::detectCores() - 2, 
+  function(pval_name){
+    # pvalue level
+    pval_level <- twas.list[[pval_name]]
+    this_gsea_path <- paste0(gsea.path, "/", pval_name)
     
-    # Third level - geneset_name
-    pbmcapply::pbmclapply(names(Validation_Genesets), function(geneset_name) {
-      Validation_Geneset <- Validation_Genesets[geneset_name]
-      final_gsea_path <- paste0(trait_gsea_path, "/", geneset_name)
+    # Second level - trait_name
+    pbmcapply::pbmclapply(
+      names(pval_level), 
+      mc.cores = parallel::detectCores() - 2, 
+      function(trait_name){
+        # trait level
+        thistrait <- pval_level[[trait_name]]
+        trait_gsea_path <- paste0(this_gsea_path, "/", trait_name)
+        
+        # Third level - geneset_name
+        pbmcapply::pbmclapply(
+          names(Validation_Genesets), 
+          mc.cores = parallel::detectCores() - 2, 
+          function(geneset_name) {
+            Validation_Geneset <- Validation_Genesets[geneset_name]
+            final_gsea_path <- paste0(trait_gsea_path, "/", geneset_name)
+            
+            # Run the analysis function
+            fisherGsea_2_MA(
+              testGenes = thistrait, 
+              geneMetaSets = Validation_Geneset, 
+              myGenes = background,
+              outDir = final_gsea_path,
+              tissueName = "sentinel",
+              name.of.TWAS.genes = trait_name
+            )
+            
+            return(NULL)  # Explicit return to avoid issues with parallel processing
+        })
+        
+        return(NULL)  # Explicit return
+      })
       
-      # Run the analysis function
-      fisherGsea_2_MA(
-        testGenes = thistrait, 
-        geneMetaSets = Validation_Geneset, 
-        myGenes = background,
-        outDir = final_gsea_path,
-        tissueName = "sentinel",
-        name.of.TWAS.genes = trait_name
-      )
-      
-      return(NULL)  # Explicit return to avoid issues with parallel processing
-    }, mc.cores = parallel::detectCores() - 2)
-    
-    return(NULL)  # Explicit return
-  }, mc.cores = parallel::detectCores() - 2)
-  
-  return(NULL)  # Explicit return
-}, mc.cores = parallel::detectCores() - 2)
+      return(NULL)  # Explicit return
+})
 
 
 ######################################################
@@ -435,10 +350,11 @@ mylist <- read.dfs.2(gsea.path)
 str(mylist)
 # this was not needed for Sanan's analysis; you only have 1 dataset
 mylist <- mylist[[1]]
-
+names(mylist)
 mylist <- access_list(mylist,
                       condition = "any(grepl('individ', names(thisitem)))",
-                      executable_code = "return(thisitem[2])")
+                      executable_code = "return(thisitem[2])"
+                      )
 
 
 
@@ -451,7 +367,10 @@ mylist <- access_list(mylist,
   thisitem <- thisitem[!grepl('ORplot', names(thisitem))]
   } else return(thisitem)"
 )
-
+names(mylist)
+names(mylist[[1]][[1]])
+names(mylist[[1]][[1]][[1]])
+names(mylist[[1]][[1]][[1]][[1]])
 
 mylist <- access_list(mylist,
                       condition = "any(grepl('tsv', names(thisitem)))",
@@ -459,32 +378,11 @@ mylist <- access_list(mylist,
                     names(thisitem) <- gsub('syngoAll__|.genesets.tsv|msigdbSetsPruned__|MGIPhenotypes_', '', names(thisitem))
                     return(thisitem)")
 
-
-################################################
-### MAKE A FUNCTION OUT OF THIS !!!!!!!!!!!!!!!!
+names(mylist[[1]][[1]][[1]][[1]])
 
 
-############# CHANGE NAME FOR 'search_for_this' VARIABLE
-# For syngoAll
-if(FALSE) mylist <- change_depth(thislist = mylist, target_depth = find_depth(mylist, 'syngoAll') + 1, search_for_this = 'Astro') # add 1 because 1 layer is lost
-
-# For MGIPhenotypes
-if(TRUE) mylist <- change_depth(thislist = mylist, target_depth = find_depth(mylist, 'MGIPhen') + 1, search_for_this = 'Class.Astro') # add 1 because 1 layer is lost
-
-
-
-save(mylist, file = paste0(gsea.path, '/temp_mylist.RData'))
-
-if(TRUE){
-      # merge MGIPhenotypes
-      # At this point you merge msigdb and synGO
-      mylist <- access_list(mylist,
-                            condition = "any(grepl('MGIPheno', names(thisitem)))",
-                            executable_code = "
-                          thisitem <- do.call('rbind', thisitem)
-                          return(thisitem)")
-
-      # At this point you merge msigdb and synGO
+### NOT SURE WHERE THIS FITS
+  # At this point you merge msigdb and synGO  
       mylist <- access_list(mylist,
                             condition = "any(grepl('AD', names(thisitem)))",
                             executable_code = "
@@ -496,11 +394,46 @@ if(TRUE){
                             })
                             names(short.list) = names(thisitem)
                             return(short.list)")
+
+################################################
+### MAKE A FUNCTION OUT OF THIS !!!!!!!!!!!!!!!!
+
+
+############# CHANGE NAME FOR 'search_for_this' VARIABLE
+sanan = FALSE
+if(sanan){
+  # For MGIPhenotypes
+  if(FALSE) mylist <- change_depth(thislist = mylist, target_depth = find_depth(mylist, 'MGIPhen') + 1, search_for_this = 'Class.Astro') # add 1 because 1 layer is lost
+
+
+
+  if(TRUE){
+        # merge MGIPhenotypes
+        # At this point you merge msigdb and synGO
+        mylist <- access_list(mylist,
+                              condition = "any(grepl('MGIPheno', names(thisitem)))",
+                              executable_code = "
+                            thisitem <- do.call('rbind', thisitem)
+                            return(thisitem)")
+  }
+
+mylist = mylist[[1]]
+
 }
 
+rachel = TRUE
+if(rachel){# For syngoAll
+mylist <- change_depth(thislist = mylist, target_depth = find_depth(mylist, 'syngoAll') + 1, search_for_this = 'Astro') # add 1 because 1 layer is lost
 
-# choose top 10
-if(FALSE){
+save(mylist, file = paste0(gsea.path, '/temp_mylist.RData'))
+
+load(paste0(gsea.path, '/temp_mylist.RData'))
+
+names(mylist)
+names(mylist[[1]])
+names(mylist[[1]][[1]])
+names(mylist[[1]][[1]][[1]])
+names(mylist[[1]][[1]][[1]][[1]])
     # At this point you merge msigdb and synGO
     mylist <- access_list(mylist,
                           condition = "any(grepl('individ', names(thisitem)))",
@@ -513,42 +446,52 @@ if(FALSE){
                           executable_code = "
                         thisitem <- do.call('rbind', thisitem)
                         return(thisitem)")
+    
+#    mylist[[1]][[1]][['gwas']] <- NULL
+
+names(mylist)
+names(mylist[[1]])
+names(mylist[[1]][[1]])
+names(mylist[[1]][[1]][[1]])
+names(mylist[[1]][[1]][[1]][[1]])
 
 }
 
-mylist = mylist[[1]]
 temp1 <- lapply(names(mylist), function(pval){
-  
-  thispval <- mylist[[pval]]
+      
+      thispval <- mylist[[pval]]
+      temp2 <- lapply(names(thispval), function(trait){
 
-  temp2 <- lapply(thispval, function(enrich.dfs){
-  
-    enrich.dfs$qvalue <- p.adjust(enrich.dfs$pval, method = 'BH') #qvalue::qvalue(enrich.dfs$pval)$qvalues  # this line effectively creates a a q-value and assigns it to the corresponding column of enriched.dfs
-    enrich.dfs$qvalue <- p.adjust(enrich.dfs$pval, method = 'BH') #qvalue::qvalue(enrich.dfs$pval)$qvalues  # this line effectively creates a a q-value and assigns it to the corresponding column of enriched.dfs
-    enrich.dfs$star  <- as.character('')                                          # he creates an empty column and assigns an empty string everywhere
-    enrich.dfs$star  <- ifelse(enrich.dfs$qvalue <= 0.001, '***',                 # then he accordingly annotates '***' based on the level of significance OF THE q-value
-                               ifelse(enrich.dfs$qvalue <= 0.01, '**',            # maybe change this to the FDR ?
-                                      ifelse(enrich.dfs$qvalue <= 0.05, '*', '')))
-    
-    
-    enrich.dfs <- enrich.dfs[order(enrich.dfs$pval, decreasing = F),]             # he organizes stuff based on pval order.. (maybe change this to FDR)
-    '%!in%' <- function(x,y)!('%in%'(x,y))
-    top_10_pathways <- unique(enrich.dfs$Reference)[1:10]
-    
-    enrich.dfs <- enrich.dfs[enrich.dfs$Reference %in% top_10_pathways]
-    enrich.dfs$model_ID <- enrich.dfs$Set
-    return(enrich.dfs)
-  })
-  
-  names(temp2) <- names(thispval)
-  return(temp2)
+          thistrait <- thispval[[trait]]
+          thistrait[['gwas']] <- trait
+          enrich.dfs <- thistrait
+          enrich.dfs$qvalue <- p.adjust(enrich.dfs$pval, method = 'BH') #qvalue::qvalue(enrich.dfs$pval)$qvalues  # this line effectively creates a a q-value and assigns it to the corresponding column of enriched.dfs
+              enrich.dfs$qvalue <- p.adjust(enrich.dfs$pval, method = 'BH') #qvalue::qvalue(enrich.dfs$pval)$qvalues  # this line effectively creates a a q-value and assigns it to the corresponding column of enriched.dfs
+              enrich.dfs$star  <- as.character('')                                          # he creates an empty column and assigns an empty string everywhere
+              enrich.dfs$star  <- ifelse(enrich.dfs$qvalue <= 0.001, '***',                 # then he accordingly annotates '***' based on the level of significance OF THE q-value
+                                        ifelse(enrich.dfs$qvalue <= 0.01, '**',            # maybe change this to the FDR ?
+                                                ifelse(enrich.dfs$qvalue <= 0.05, '*', '')))
+              
+              
+              enrich.dfs <- enrich.dfs[order(enrich.dfs$pval, decreasing = F),]             # he organizes stuff based on pval order.. (maybe change this to FDR)
+              '%!in%' <- function(x,y)!('%in%'(x,y))
+              top_10_pathways <- unique(enrich.dfs$Reference)[1:10]
+              
+              enrich.dfs <- enrich.dfs[enrich.dfs$Reference %in% top_10_pathways]
+              enrich.dfs$model_ID <- enrich.dfs$Set
+              enrich.dfs      
+      })
+          
+      names(temp2) <- names(thispval)
+      return(temp2)
 })
 
 names(temp1) <- names(mylist)
 mylist <- temp1
+names(mylist)
+names(mylist[[1]])
+names(mylist[[1]][[1]])
 
-
-df <- mylist$pvalue_0.05_backgrounds
 #df <- mylist$pvalue_0.01_backgrounds
 
 #########3 make similar with actual thing
@@ -566,8 +509,8 @@ require(scales)
 require(ggrepel)
 require(ggplot2, lib.loc = "/sc/arion/projects/roussp01a/sanan/Rlibs/231221_R_4.2.0_MultiWAS")
 require(scales, lib.loc = "/sc/arion/projects/roussp01a/sanan/Rlibs/231221_R_4.2.0_MultiWAS")
-all.plot.ggpath <- paste0(p.export, "/Results", "/all.plots")
-all.plot.ggpath <- paste0(p.export, "/Results", "/all.plots_protein_only")
+all.plot.ggpath <- paste0(p.export, "/All.Plots")
+#all.plot.ggpath <- paste0(p.export, "/Results", "/all.plots_protein_only")
 
 # when this lapply is ready you should include the heatmap thing and delete the df <- mylist.. above
 
