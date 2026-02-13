@@ -86,6 +86,17 @@ tw2.fdr = TRUE
 tw2.fdr = TRUE
 
 
+# 16 September 2025 revision: TW2 coding
+main.dir = "/sc/arion/projects/roussp01a/sanan/230420_TWAS_companionPipelines/combinationAnalyses/stackTWAS_V2/output/260115_allEUR_revisions_Coding" # since we are focusing on p-value it doesnt matter if choose original TW_mod
+p.bulk = "/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/Resources/TW/laptop_to_minerva/TW2_mod_bulk_processedCols/coding/bulk"
+outdir = '021226_revision/tw2_coding'
+bulk.filter.coding = TRUE
+tw.fdr = FALSE
+tw.mapped = TRUE  # tw.mapped means that fdr column is already TW_FDR
+tw.bulk.fdr = TRUE
+bulk_format = 'tsv'
+tw2.fdr = TRUE
+
 
 # DEPENDENT VARIABLES
 lists.outdir = paste0(base.outdir, "/Resources/", outdir, '/data_lists')
@@ -235,6 +246,7 @@ if(tw2.fdr){
 })
 }
 
+names(temp)
 for(i in seq_along(temp)){
   print(temp[[i]]$p[1:10])
 }
@@ -242,6 +254,7 @@ for(i in seq_along(temp)){
 str(temp)
 names(temp)
 names(raw_TWAS)
+str(raw_TWAS)
 names(temp) <- names(raw_TWAS)
 ready_for_GSEA_preparation_ALL_TISSUES_NO_BULK <- temp
 
@@ -271,7 +284,7 @@ raw_TWAS <- ready_for_GSEA_preparation_ALL_TISSUES_NO_BULK
 
 a = c()
 for(i in seq_along(raw_TWAS)){
-  a = c(a, bulk[[i]]$p)
+  a = c(a, raw_TWAS[[i]]$p)
 }
 length(a)
 length(unique(a))
@@ -290,7 +303,7 @@ ma.raw_TWAS_2 <- lapply(names(bulk), function(name){
   bind_rows(bulk[[name]], raw_TWAS[[name]])
 })
 names(ma.raw_TWAS_2) <- names(bulk)
-str(ma.raw_TWAS_2)
+#str(ma.raw_TWAS_2)
 
 # Check names
 all(names(ma.raw_TWAS_2) == names(raw_TWAS))
@@ -331,8 +344,7 @@ all.TWAS.forGSEA.fisher <- prepare.for.GSEA(
   mydf = everything_ready_TWAS_for_GSEA_preparation,
   filtering.criteria = list(c("p", 0.05), c("bonferroni", 0.05), c("p", 0.01), c("fdr", 0.05), c("fdr", 0.01)),
   save.path = paste0(lists.outdir, "TWAS_Fisher_input"),  #/multiple.TWAS.Combinations/ma.TWAS_corrected_BULK_V1", # has the last results 
-  only.aggregates = T, 
-  alternative_tissues = TRUE # FOR THE TW impementation
+  only.aggregates = T
 )
 
 str(all.TWAS.forGSEA.fisher[[1]])
@@ -348,6 +360,7 @@ load(paste0(lists.outdir, "/ready_for_Fisher_analysis_TWAS_list.RData"))
 load("/sc/arion/projects/va-biobank/marios/Clinical.Significance/Resources/Imputable.Genes.List_V4.RData")
 load("/sc/arion/projects/va-biobank/marios/Clinical.Significance/Resources/Validation.Gene.List.R")
 source('/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/060725_helper_clinical_GSEA.R')
+source("/sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/060725_helper_GSEA_ORplot_Functions.R")
 
 
 # Make sure you only have unique entries in each list # don't freak out if you don't, I believe the pipeline handles that, so just check
@@ -366,6 +379,30 @@ names(ready_for_Fisher_analysis_TWAS_list)
 
 input_lists = ready_for_Fisher_analysis_TWAS_list["data_listsTWAS_Fisher_input_p_0.01_MIXED"]
 input_lists = ready_for_Fisher_analysis_TWAS_list[3]
+
+names(ready_for_Fisher_analysis_TWAS_list)
+
+# Take the first list of traits
+traits_list <- input_lists[[1]]
+
+# Category names (assumed consistent across traits)
+cats <- names(traits_list[[1]])
+
+# Build the aggregated "All"
+all_agg <- setNames(vector("list", length(cats)), cats)
+for (cat in cats) {
+  all_agg[[cat]] <- unique(unlist(lapply(traits_list, function(tr) tr[[cat]]), use.names = FALSE))
+  # If you prefer sorted output, use: sort(unique(...))
+}
+
+# Attach it as a new trait
+input_lists[[1]][["All"]] <- all_agg
+
+
+
+names(input_lists[[1]])
+names(input_lists[[1]][[1]])
+str(input_lists[[1]][[1]])
 
 multi3_wrapper(
   twas.list = input_lists, #for NO_focus   #####all.TWAS.forGSEA.fisher #for FOCUS,

@@ -14,16 +14,24 @@ multi3_wrapper(
 # alla3e to multi.enrich.dfs gia na kaneis ta modifications kalytera
 
 
-# Sanan, please start here.
+# START HERE
 #multi.enrich.dfs <- fread("/sc/arion/projects/va-biobank/marios/Clinical.Significance/final_revision/multi.enrich.dfs.csv")
 
 View(multi.enrich.dfs)
 
 cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+# Sanan's pallete
+p.pal = "/sc/arion/projects/roussp01a/sanan/230706_NPSAD_filePrep/fromHome/230921_PsychAD_color_palette.csv"
+col_map = fread(p.pal)
+col_map[grep('#008080', color_hex)]
+
+cbPalette <- c('#999999', '#B7A1CD', '#E6A024', '#1A5D88', '#8CC5C7')
+
 saveplot = T
 title.of.plot = "TWAS_Fisher_input_p_0.01_PROTEIN_GreatGenes"
-gsea.outdir.or = "/sc/arion/projects/va-biobank/marios/Clinical.Significance/final_revision/fisher_results_V3/TWAS_Fisher_input_p_0.01_PROTEIN_GreatGenes/ORplots/all.traits.1.graph"
+gsea.outdir.or = "/sc/arion/projects/va-biobank/PROJECTS/ma_gsea/output/clinical_genes/021226_revision/tw_coding"
 show.title = F
 plot.width = 8.5
 plot.height = 8
@@ -41,15 +49,16 @@ multi.enrich.dfs$name_full <- factor(multi.enrich.dfs$name_full,levels=c("Subcla
 multi.enrich.dfs$legend <- factor(multi.enrich.dfs$name_full,levels=c("Subclass-Aggregate","Class-Aggregate","Pseudobulk Bulk", "Bulk"))
 multi.enrich.dfs$Set <- unlist(lapply(multi.enrich.dfs$Set, function(x) strsplit(x,split="_")[[1]][1]))
 multi.enrich.dfs$Set[multi.enrich.dfs$Set == "Alcoholism"] <- "AUD"
-multi.enrich.dfs$Set <- factor(multi.enrich.dfs$Set,levels=rev(c("BD","SCZ","AD","MS","AUD","ALS","PD","Anorexia","Migraines","MDD","ADHD","Insomnia")))
+unique(multi.enrich.dfs$Set)
+multi.enrich.dfs$Set <- factor(multi.enrich.dfs$Set,levels=rev(c("All", "BD","SCZ","AD","MS","AUD","ALS","PD","Anorexia","Migraines","MDD","ADHD","Insomnia")))
 
 
 # this is used in scale_color_manual in values = ... This is to more easily manipulate the colors and order in your plot.
 colors_to_include <- rep(c(cbbPalette, cbPalette[1]), 2)[1:(length(unique(multi.enrich.dfs$name_full))) + 1]
 
+# this is for the special sanan colors
+colors_to_include <- rep(c(cbPalette, cbPalette[1]), 2)[1:(length(unique(multi.enrich.dfs$name_full))) + 1]
 
-
-#multi.enrich.dfs <- df
 
 all.traits.p.OR.CADsig <-  ggplot( # reference line is a dashed line corresponds to OR = 1 (by geom_hline)                                                      
   
@@ -61,7 +70,6 @@ all.traits.p.OR.CADsig <-  ggplot( # reference line is a dashed line corresponds
   geom_hline(aes(yintercept = 1), size = .25, linetype ="dashed") +
   geom_errorbar(aes(ymax = OR.ci95.up, ymin = OR.ci95.down, group = name_full, color = name_full), size = 0.5,
                 width = 0.25, position = position_dodge(width = 0.65)) +
-  
   geom_point(aes(
     # color = Set,
     group = name_full, 

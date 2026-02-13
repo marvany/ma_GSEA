@@ -93,7 +93,7 @@ multi3_wrapper <- function(twas.list, backgrounds, validation, gsea.path, define
       
       #return(only.psych.coding.only.gsea.paths)
       
-      require(ggplot2)
+      #require(ggplot2)
       
       
       multi.enrich.dfs <- multi_tissue_trait_OR_sig_v2(

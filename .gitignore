@@ -4,3 +4,9 @@
 
 !execute_scripts/
 !execute_scripts/**
+
+!rachel_GSEA
+!rachel_GSEA/Results_260212
+!rachel_GSEA/Results_260212/**
+rachel_GSEA/Results_260212/**/*.png
+rachel_GSEA/Results_260212/**/*.pdf

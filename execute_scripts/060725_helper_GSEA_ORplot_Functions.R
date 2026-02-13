@@ -866,9 +866,9 @@ multi_tissue_trait_OR_sig <- function(
     if(nrow(multi.enrich.dfs) > 0){
       
       # 062624 FOR THE FINAL PLOT ENTER BREAKPOINT AT THIS POINT AND LOG THE
+      browser()
       # /sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/finalPlot_hotfix.R
 
-      browser()
       ######## SPECIFIC FOR SANNAN MODIFICATIONS###############
       multi.enrich.dfs$name_full[multi.enrich.dfs$name_full == "All EUR Class"] <- "EUR Class-Aggregate"
       multi.enrich.dfs$name_full[multi.enrich.dfs$name_full == "All EUR Subclass"] <- "EUR Subclass-Aggregate"
@@ -1140,7 +1140,6 @@ multi_tissue_trait_OR_sig_v2 <- function(
       
       if (nrow(enrich.dfs)>0) { # if there are not genes, there is nothing to plot           
         
-        
         # library(ggplot2, lib.loc = "/sc/arion/projects/roussp01a/sanan/Rlibs/231221_R_4.2.0_MultiWAS"), ; library(grid)
         #View(enrich.dfs)
         #### ACTUAL PLOT ####  # the error bars (by geom_errorbars) are the CI bars.
@@ -1311,7 +1310,7 @@ multi_tissue_trait_OR_sig_v2 <- function(
     # multi.enrich.dfs.backup <- multi.enrich.dfs
     
     if(nrow(multi.enrich.dfs) > 0){
-      
+      browser()
       # 062624 FOR THE FINAL PLOT ENTER BREAKPOINT AT THIS POINT AND LOG THE
       # /sc/arion/projects/va-biobank/PROJECTS/ma_GSEA/execute_scripts/finalPlot_hotfix.R
       
