@@ -1,0 +1,641 @@
+pvalue	gwas	model_ID	geneset	pathway	pval	neg_log10p
+pvalue_0.01	AD	Astro_no_meta_analysis	msigdbSetsPruned	Go Cellular Response to Hormone Stimulus	8.97064302138915e-05	4.04717642533584
+pvalue_0.01	AD	Astro_no_meta_analysis	msigdbSetsPruned	Go Hormone Mediated Signaling Pathway	0.000204418388413491	3.68948003991056
+pvalue_0.01	AD	Astro_no_meta_analysis	msigdbSetsPruned	Go Intracellular Receptor Signaling Pathway	0.000577828179540298	3.23820128229031
+pvalue_0.01	AD	Astro_no_meta_analysis	msigdbSetsPruned	Go Androgen Receptor Signaling Pathway	0.000655947942649105	3.18313062574222
+pvalue_0.01	AD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Signaling by Robo Receptors	0.000775711668730839	3.11029967558263
+pvalue_0.01	AD	Astro_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Cyclin Dependent Protein Kinase Activity	0.00121487082577885	2.91546989707292
+pvalue_0.01	AD	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Animal Organ Morphogenesis	0.00162891146082765	2.78810252104385
+pvalue_0.01	AD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Regulation of Commissural Axon Pathfinding by Slit and Robo	0.00214574400157704	2.66842209287068
+pvalue_0.01	AD	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Cell Differentiation	0.00246856983567048	2.6075545821097
+pvalue_0.01	AD	Astro_no_meta_analysis	msigdbSetsPruned	Sa Reg Cascade of Cyclin Expr	0.00366806789737299	2.43556263396671
+pvalue_0.01	AD	EN_no_meta_analysis	msigdbSetsPruned	Go Eating Behavior	0.000196475076227736	3.70669253405846
+pvalue_0.01	AD	EN_no_meta_analysis	msigdbSetsPruned	Kegg Glycerophospholipid Metabolism	0.000575598390100189	3.23988042941851
+pvalue_0.01	AD	EN_no_meta_analysis	msigdbSetsPruned	Go Phosphatidylethanolamine Metabolic Process	0.00130930460163042	2.88295930576535
+pvalue_0.01	AD	EN_no_meta_analysis	msigdbSetsPruned	Go Response to Calcium Ion	0.00180243314236607	2.7441408355905
+pvalue_0.01	AD	EN_no_meta_analysis	msigdbSetsPruned	Go Protein Kinase c Activating g Protein Coupled Receptor Signaling Pathway	0.0018546286661627	2.73174303180633
+pvalue_0.01	AD	EN_no_meta_analysis	msigdbSetsPruned	Go Sa Node Cell to Atrial Cardiac Muscle Cell Communication	0.00354540083733324	2.4503346570674
+pvalue_0.01	AD	EN_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Glycolytic Process	0.00430738998915063	2.36578580563036
+pvalue_0.01	AD	EN_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Wnt Signaling Pathway	0.00485160638122029	2.31411444139953
+pvalue_0.01	AD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Glycerophospholipid Biosynthesis	0.00559304393566935	2.25235176909589
+pvalue_0.01	AD	EN_no_meta_analysis	syngoAll	Integral Component of Postsynaptic Density Membrane	0.0058946000923608	2.22954565343102
+pvalue_0.01	AD	Endo_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Cilium Assembly	0.000136869018141839	3.86369484823415
+pvalue_0.01	AD	Endo_no_meta_analysis	msigdbSetsPruned	Go Translational Initiation	0.000173936339268585	3.75960967449468
+pvalue_0.01	AD	Endo_no_meta_analysis	syngoAll	Postsynaptic Ribosome	0.000176107555127961	3.75422201211903
+pvalue_0.01	AD	Endo_no_meta_analysis	msigdbSetsPruned	Go Protein Localization to Membrane	0.00032879108567181	3.48307996575493
+pvalue_0.01	AD	Endo_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Plasma Membrane Bounded Cell Projection Assembly	0.000677959952303157	3.16879595953624
+pvalue_0.01	AD	Endo_no_meta_analysis	msigdbSetsPruned	Reactome Selenoamino Acid Metabolism	0.000824591834310914	3.08376097020319
+pvalue_0.01	AD	Endo_no_meta_analysis	msigdbSetsPruned	Reactome Translation	0.00111588044350196	2.95238233363213
+pvalue_0.01	AD	Endo_no_meta_analysis	msigdbSetsPruned	Go Protein Localization to Endoplasmic Reticulum	0.00122846707918417	2.910636477377
+pvalue_0.01	AD	Endo_no_meta_analysis	msigdbSetsPruned	Sig Pip3 Signaling in b Lymphocytes	0.00136432492879491	2.86508218541466
+pvalue_0.01	AD	Endo_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Organelle Assembly	0.00144556665472914	2.83996187831801
+pvalue_0.01	AD	IN_no_meta_analysis	msigdbSetsPruned	Biocarta Carm1 Pathway	6.40925336548652e-05	4.19319255989389
+pvalue_0.01	AD	IN_no_meta_analysis	msigdbSetsPruned	Biocarta Gata3 Pathway	0.000104996736488121	3.97882419947508
+pvalue_0.01	AD	IN_no_meta_analysis	msigdbSetsPruned	Reactome Tp53 Regulates Transcription of Genes Involved in G2 Cell Cycle Arrest	0.000230755203857392	3.63684849623459
+pvalue_0.01	AD	IN_no_meta_analysis	msigdbSetsPruned	Biocarta Chrebp Pathway	0.0002726675435868	3.56436655432109
+pvalue_0.01	AD	IN_no_meta_analysis	msigdbSetsPruned	Go Activation of Protein Kinase Activity	0.000384112189950129	3.41554191011139
+pvalue_0.01	AD	IN_no_meta_analysis	msigdbSetsPruned	Go Response to Growth Factor	0.000671267687223913	3.17310425792174
+pvalue_0.01	AD	IN_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Cell Cycle G1 s Phase Transition	0.000744154351849076	3.12833697412649
+pvalue_0.01	AD	IN_no_meta_analysis	msigdbSetsPruned	Go Response to Transforming Growth Factor Beta	0.00101094570767127	2.99527216734858
+pvalue_0.01	AD	IN_no_meta_analysis	msigdbSetsPruned	Go Response to Endogenous Stimulus	0.00133953737157436	2.87304516556296
+pvalue_0.01	AD	IN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Removal of Superoxide Radicals	0.00198240941392862	2.70280664861554
+pvalue_0.01	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Regulation of Superoxide Anion Generation	0.000194368570060934	3.7113739603596
+pvalue_0.01	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Antigen Processing and Presentation of Endogenous Antigen	0.000224170081399429	3.64942235048402
+pvalue_0.01	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Amyloid Beta Clearance	0.000983448886662023	3.00724820698764
+pvalue_0.01	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Ceramide Metabolic Process	0.00154235202360496	2.81181649239332
+pvalue_0.01	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Plasma Membrane Organization	0.00167103216514234	2.77701519043612
+pvalue_0.01	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Regulation of Chromosome Organization	0.00200487981578062	2.69791165641423
+pvalue_0.01	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Endomembrane System Organization	0.00202662644670495	2.69322629426967
+pvalue_0.01	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Telomere Maintenance in Response to Dna Damage	0.00220492032631857	2.65660709892419
+pvalue_0.01	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Telomere Organization	0.00232153485900246	2.63422479080084
+pvalue_0.01	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Myelin Maintenance	0.00256329202552202	2.59120191357846
+pvalue_0.01	AD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Chromatin Modifying Enzymes	6.22531182330326e-05	4.2058388900558
+pvalue_0.01	AD	Mural_no_meta_analysis	msigdbSetsPruned	Go Peptidyl Amino Acid Modification	0.000966313595625175	3.01488191007727
+pvalue_0.01	AD	Mural_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Anion Transport	0.00185467796712169	2.73173148725822
+pvalue_0.01	AD	Mural_no_meta_analysis	msigdbSetsPruned	Go Peptidyl Lysine Modification	0.00267444610933016	2.57276614880891
+pvalue_0.01	AD	Mural_no_meta_analysis	msigdbSetsPruned	Go Protein Acylation	0.00278297586551316	2.55549055993254
+pvalue_0.01	AD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Selenoamino Acid Metabolism	0.00357395264994159	2.44685120560914
+pvalue_0.01	AD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Deactivation of the Beta Catenin Transactivating Complex	0.00485415654335967	2.3138862220665
+pvalue_0.01	AD	Mural_no_meta_analysis	msigdbSetsPruned	Kegg Tight Junction	0.00492904968184283	2.30723680439722
+pvalue_0.01	AD	Mural_no_meta_analysis	syngoAll	Integral Component of Presynaptic Active Zone Membrane	0.00535348331354501	2.27136354665385
+pvalue_0.01	AD	Mural_no_meta_analysis	syngoAll	Presynaptic Active Zone Membrane	0.0084971670394032	2.07072584419509
+pvalue_0.01	AD	OPC_no_meta_analysis	msigdbSetsPruned	Sig Regulation of the Actin Cytoskeleton by Rho Gtpases	0.000815464374444874	3.08859500742563
+pvalue_0.01	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Cellular Response to Brain Derived Neurotrophic Factor Stimulus	0.00152992888958861	2.81532875452683
+pvalue_0.01	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Post Embryonic Development	0.0017301749477661	2.76190998068162
+pvalue_0.01	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Protein Polyubiquitination	0.00188316832825653	2.72511085854646
+pvalue_0.01	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Keratinocyte Proliferation	0.00227174343577122	2.64364071817253
+pvalue_0.01	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Basic Amino Acid Transport	0.00304616238275611	2.51624694930752
+pvalue_0.01	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Small Gtpase Mediated Signal Transduction	0.00451589449896792	2.34525621268402
+pvalue_0.01	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Small Gtpase Mediated Signal Transduction	0.00469321238826351	2.32852979162946
+pvalue_0.01	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Protein Containing Complex Localization	0.00543874061643905	2.26450165299498
+pvalue_0.01	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Rho Protein Signal Transduction	0.00749663512734707	2.12513362641359
+pvalue_0.01	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Cell Substrate Adhesion	0.000386347984350574	3.41302134920828
+pvalue_0.01	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Synaptic Vesicle Localization	0.000475632397521213	3.32272857124113
+pvalue_0.01	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Adrenal Gland Development	0.000476954543511279	3.32152300972913
+pvalue_0.01	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Axon Development	0.000506424137967286	3.29548560248485
+pvalue_0.01	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Neuron Migration	0.00055166281622751	3.25832628784112
+pvalue_0.01	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Reactome Hiv Infection	0.000963265774722052	3.01625387012327
+pvalue_0.01	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Chondrocyte Differentiation	0.00135549367551886	2.86790250441597
+pvalue_0.01	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Cartilage Development	0.00139912440920201	2.85414366661776
+pvalue_0.01	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Heart Morphogenesis	0.00162664332865417	2.78870766364487
+pvalue_0.01	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Cell Junction Assembly	0.00166204960170248	2.77935601940616
+pvalue_0.01	BD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Diseases of Signal Transduction by Growth Factor Receptors and Second Messengers	0.000122808673491861	3.91077095960664
+pvalue_0.01	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Cellular Metabolic Compound Salvage	0.00107631604178247	2.96806018680264
+pvalue_0.01	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Protein Targeting	0.00130569249058933	2.88415909363168
+pvalue_0.01	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Peroxisome Organization	0.0015965966231558	2.79680479360834
+pvalue_0.01	BD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Dna Replication Pre Initiation	0.00208997719032202	2.67985845368384
+pvalue_0.01	BD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Translation	0.00240560686961787	2.61877534470432
+pvalue_0.01	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Rna Decapping	0.00344902203915823	2.46230403049366
+pvalue_0.01	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Sodium Independent Organic Anion Transport	0.00396321091958889	2.40195281417198
+pvalue_0.01	BD	Astro_no_meta_analysis	msigdbSetsPruned	Kegg Glyoxylate and Dicarboxylate Metabolism	0.00451069354637997	2.34575667758797
+pvalue_0.01	BD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Mrna Decay by 3 to 5 Exoribonuclease	0.00451069354637997	2.34575667758797
+pvalue_0.01	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Termination of Rna Polymerase Ii Transcription	0.000510489971080729	3.29201278550084
+pvalue_0.01	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Microtubule Based Movement	0.000631745977365039	3.19945751476417
+pvalue_0.01	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Mrna Cleavage	0.00151062222571604	2.8208441298369
+pvalue_0.01	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Protein Quality Control for Misfolded or Incompletely Synthesized Proteins	0.00224376675593657	2.64902229085371
+pvalue_0.01	BD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Organelle Biogenesis and Maintenance	0.00412732888458347	2.38433092315824
+pvalue_0.01	BD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Interaction Between L1 and Ankyrins	0.00428814763839761	2.36773027055465
+pvalue_0.01	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Heterotypic Cell Cell Adhesion	0.00456085042723609	2.34095417018203
+pvalue_0.01	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Membrane Organization	0.00497586638801278	2.3031312898381
+pvalue_0.01	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Macropinocytosis	0.00512131777502594	2.29061827558945
+pvalue_0.01	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Chaperone Mediated Protein Transport	0.00512131777502594	2.29061827558945
+pvalue_0.01	BD	Endo_no_meta_analysis	msigdbSetsPruned	Pid Telomerase Pathway	0.000501648269942826	3.29960068118611
+pvalue_0.01	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Response to Stimulus	0.00280030613449614	2.55279448820963
+pvalue_0.01	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Hippo Signaling	0.00316070701984409	2.50021575900447
+pvalue_0.01	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Telomere Maintenance	0.00316070701984409	2.50021575900447
+pvalue_0.01	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Dna Biosynthetic Process	0.0033415688696439	2.47604958365054
+pvalue_0.01	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Response to Endogenous Stimulus	0.00432645371376282	2.3638679381907
+pvalue_0.01	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Activin Receptor Signaling Pathway	0.00452554279454944	2.34432932396372
+pvalue_0.01	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go G0 to G1 Transition	0.00452554279454944	2.34432932396372
+pvalue_0.01	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Digestive System Development	0.00463014759838816	2.33440516445855
+pvalue_0.01	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Cell Morphogenesis	0.00484883084191249	2.31436296657646
+pvalue_0.01	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Response to Activity	0.00108276272108106	2.96546670516187
+pvalue_0.01	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Central Nervous System Neuron Axonogenesis	0.00174191524067428	2.7589729810178
+pvalue_0.01	BD	IN_no_meta_analysis	msigdbSetsPruned	Reactome Slbp Dependent Processing of Replication Dependent Histone Pre Mrnas	0.00245126264009445	2.61061015385078
+pvalue_0.01	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Extracellular Matrix Constituent Secretion	0.00245126264009445	2.61061015385078
+pvalue_0.01	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Tau Protein Kinase Activity	0.00245126264009445	2.61061015385078
+pvalue_0.01	BD	IN_no_meta_analysis	msigdbSetsPruned	Reactome Interleukin 6 Signaling	0.00245126264009445	2.61061015385078
+pvalue_0.01	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Nitric Oxide Metabolic Process	0.00256500599882027	2.59091161485957
+pvalue_0.01	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Monosaccharide Metabolic Process	0.00273933544588518	2.56235478286953
+pvalue_0.01	BD	IN_no_meta_analysis	msigdbSetsPruned	Reactome Interleukin 35 Signalling	0.00292838114260258	2.53337239846183
+pvalue_0.01	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Cell Cycle	0.00307011362085423	2.51284555155965
+pvalue_0.01	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Establishment of Lymphocyte Polarity	0.00147242966508426	2.83196544139338
+pvalue_0.01	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Glial Cell Apoptotic Process	0.00277259008033519	2.55711433489676
+pvalue_0.01	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Glial Cell Proliferation	0.00277259008033519	2.55711433489676
+pvalue_0.01	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Regulation of Establishment or Maintenance of Cell Polarity	0.00706635382852261	2.1508046202372
+pvalue_0.01	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Hormone Biosynthetic Process	0.00999476788148159	2.00022728748506
+pvalue_0.01	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Potassium Ion Homeostasis	0.0102184080282564	1.99061675962183
+pvalue_0.01	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Very Long Chain Fatty Acid Metabolic Process	0.0109109470821611	1.96213755053863
+pvalue_0.01	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Response to Vitamin	0.0109931092941155	1.9588794542287
+pvalue_0.01	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Organelle Disassembly	0.0127810808582862	1.89343241762202
+pvalue_0.01	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Maintenance of Protein Location	0.0147259819221765	1.83191573700503
+pvalue_0.01	BD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Endosomal Vacuolar Pathway	0.000610368482860262	3.21440789981277
+pvalue_0.01	BD	Mural_no_meta_analysis	msigdbSetsPruned	Biocarta Mhc Pathway	0.00073084332700597	3.13617571402634
+pvalue_0.01	BD	Mural_no_meta_analysis	msigdbSetsPruned	Biocarta Ctl Pathway	0.000861838945705135	3.06457388443811
+pvalue_0.01	BD	Mural_no_meta_analysis	msigdbSetsPruned	Biocarta Eif Pathway	0.00100328493367004	2.99857570950492
+pvalue_0.01	BD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Hiv Infection	0.00110993986183916	2.95470055128446
+pvalue_0.01	BD	Mural_no_meta_analysis	msigdbSetsPruned	Biocarta Mcalpain Pathway	0.00167217644728614	2.77671789792596
+pvalue_0.01	BD	Mural_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of t Cell Cytokine Production	0.00167217644728614	2.77671789792596
+pvalue_0.01	BD	Mural_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Cell Death	0.00190426811528428	2.72027190427569
+pvalue_0.01	BD	Mural_no_meta_analysis	msigdbSetsPruned	Biocarta Nkcells Pathway	0.00206751895638013	2.68455049985834
+pvalue_0.01	BD	Mural_no_meta_analysis	msigdbSetsPruned	Go Hematopoietic Stem Cell Proliferation	0.00228017481138672	2.64203185619677
+pvalue_0.01	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Regulation of Macroautophagy	0.000154467171981103	3.81116380453904
+pvalue_0.01	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Regulation of Catabolic Process	0.000302025369898708	3.51995657510825
+pvalue_0.01	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Glutamate Receptor Signaling Pathway	0.000558912036832957	3.25265653723712
+pvalue_0.01	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Ionotropic Glutamate Receptor Signaling Pathway	0.000722456271594971	3.14118843449492
+pvalue_0.01	BD	OPC_no_meta_analysis	syngoAll	Presynapse	0.00157452790719096	2.80284963745257
+pvalue_0.01	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Lipid Localization	0.00165944383620366	2.78003744168237
+pvalue_0.01	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Regulation of Cell Projection Organization	0.00213984097382451	2.6696185008362
+pvalue_0.01	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Catabolic Process	0.00222952246402909	2.65178814746565
+pvalue_0.01	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Mitochondrial Electron Transport Ubiquinol to Cytochrome c	0.00265102563410172	2.57658607283458
+pvalue_0.01	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Skeletal Muscle Tissue Development	0.00265102563410172	2.57658607283458
+pvalue_0.01	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Axonogenesis	0.000461481872682117	3.33584535368194
+pvalue_0.01	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Biocarta Btg2 Pathway	0.00176095895631263	2.75425076626706
+pvalue_0.01	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Collateral Sprouting	0.00176095895631263	2.75425076626706
+pvalue_0.01	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Dopamine Receptor Signaling Pathway	0.00176095895631263	2.75425076626706
+pvalue_0.01	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Rna Splicing via Endonucleolytic Cleavage and Ligation	0.00288079862826811	2.54048709843201
+pvalue_0.01	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Reactome Trna Processing	0.0029066161203153	2.53661232214685
+pvalue_0.01	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Cell Projection Organization	0.00323953280204094	2.4895176182273
+pvalue_0.01	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Pid Dna Pk Pathway	0.00377033268463189	2.42362032705542
+pvalue_0.01	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Dna Ligation	0.00377033268463189	2.42362032705542
+pvalue_0.01	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Response to Gamma Radiation	0.00438388093008557	2.358141250169
+pvalue_0.01	PD	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Cellular Component Biogenesis	0.000387195746126814	3.41206942265445
+pvalue_0.01	PD	Astro_no_meta_analysis	msigdbSetsPruned	Go Nucleus Localization	0.000508669628960859	3.29356419193119
+pvalue_0.01	PD	Astro_no_meta_analysis	msigdbSetsPruned	Go Dna Biosynthetic Process	0.00059965481847775	3.22209867223109
+pvalue_0.01	PD	Astro_no_meta_analysis	msigdbSetsPruned	Biocarta Agr Pathway	0.000625289545693687	3.20391883229086
+pvalue_0.01	PD	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Organelle Organization	0.000975366219345253	3.01083228975942
+pvalue_0.01	PD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Metabolism of Rna	0.000975830966892392	3.01062540416073
+pvalue_0.01	PD	Astro_no_meta_analysis	msigdbSetsPruned	Go Cellular Response to Dna Damage Stimulus	0.00179807526371294	2.74519213355323
+pvalue_0.01	PD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Processing of Capped Intron Containing Pre Mrna	0.00193373286236147	2.71360352219488
+pvalue_0.01	PD	Astro_no_meta_analysis	msigdbSetsPruned	Pid Erbb2 Erbb3 Pathway	0.00205620252498682	2.68693411187885
+pvalue_0.01	PD	Astro_no_meta_analysis	msigdbSetsPruned	Go Protein Containing Complex Assembly	0.0022166347982137	2.65430585320277
+pvalue_0.01	PD	EN_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Cell Adhesion Mediated by Integrin	0.000342807267588589	3.46494997951382
+pvalue_0.01	PD	EN_no_meta_analysis	msigdbSetsPruned	Go Regeneration	0.00171711397487493	2.76520087722321
+pvalue_0.01	PD	EN_no_meta_analysis	msigdbSetsPruned	Go Calcium Ion Import	0.00175858989357338	2.75483542701434
+pvalue_0.01	PD	EN_no_meta_analysis	msigdbSetsPruned	Go Synapse Pruning	0.00253026923369634	2.5968332651927
+pvalue_0.01	PD	EN_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Interleukin 17 Production	0.00302254281915644	2.51962753794721
+pvalue_0.01	PD	EN_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Long Term Synaptic Potentiation	0.00302254281915644	2.51962753794721
+pvalue_0.01	PD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Metabolism of Steroids	0.00354170270091066	2.45078789734497
+pvalue_0.01	PD	EN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Histone H4 Acetylation	0.00355589295113423	2.44905132178267
+pvalue_0.01	PD	EN_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Response to Oxidative Stress	0.00474348663257127	2.32390231894937
+pvalue_0.01	PD	EN_no_meta_analysis	msigdbSetsPruned	Kegg Primary Bile Acid Biosynthesis	0.00539657712251557	2.267881612054
+pvalue_0.01	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Helicase Activity	0.00017573325335486	3.75514605078669
+pvalue_0.01	PD	Endo_no_meta_analysis	msigdbSetsPruned	Kegg Cell Cycle	0.00105653591720854	2.9761157344088
+pvalue_0.01	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Protein Modification by Small Protein Conjugation or Removal	0.00126844657082024	2.8967278212973
+pvalue_0.01	PD	Endo_no_meta_analysis	msigdbSetsPruned	Pid Foxo Pathway	0.0028934743556127	2.53858036236394
+pvalue_0.01	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Organelle Organization	0.00294338658882757	2.5311526932628
+pvalue_0.01	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Protein Destabilization	0.00301348215832453	2.52093137548001
+pvalue_0.01	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Dna Biosynthetic Process	0.00349165122163983	2.45696914414236
+pvalue_0.01	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Protein K48 Linked Ubiquitination	0.00364800456786053	2.43794462654006
+pvalue_0.01	PD	Endo_no_meta_analysis	msigdbSetsPruned	Pid Hdac Classi Pathway	0.00448431055883102	2.34830431817426
+pvalue_0.01	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Histone Methylation	0.00493263012439091	2.30692144909462
+pvalue_0.01	PD	IN_no_meta_analysis	msigdbSetsPruned	Reactome Metabolism of Rna	0.000237169761988634	3.62494068224956
+pvalue_0.01	PD	IN_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Cell Cycle	0.000405293979615435	3.39222984737899
+pvalue_0.01	PD	IN_no_meta_analysis	msigdbSetsPruned	Pid Telomerase Pathway	0.000469896459254892	3.32799782744322
+pvalue_0.01	PD	IN_no_meta_analysis	msigdbSetsPruned	Reactome Rrna Processing	0.000730621133227701	3.13630776996774
+pvalue_0.01	PD	IN_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Dna Replication	0.000806443328458099	3.09342614656727
+pvalue_0.01	PD	IN_no_meta_analysis	msigdbSetsPruned	Go Cellular Response to Brain Derived Neurotrophic Factor Stimulus	0.00133819386739596	2.8734809647138
+pvalue_0.01	PD	IN_no_meta_analysis	msigdbSetsPruned	Reactome Cellular Responses to External Stimuli	0.00168071693898167	2.77450542290176
+pvalue_0.01	PD	IN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Dna Dependent Dna Replication	0.0022655538124182	2.64482561781111
+pvalue_0.01	PD	IN_no_meta_analysis	msigdbSetsPruned	Sa Reg Cascade of Cyclin Expr	0.00229443788718168	2.6393236946132
+pvalue_0.01	PD	IN_no_meta_analysis	syngoAll	Protein Translation at Synapse	0.00336968321420085	2.4724109254762
+pvalue_0.01	PD	Immune_no_meta_analysis	msigdbSetsPruned	Pid Fak Pathway	0.000214691845900859	3.66818444996296
+pvalue_0.01	PD	Immune_no_meta_analysis	msigdbSetsPruned	Kegg Protein Export	0.000250482373708254	3.60122282975911
+pvalue_0.01	PD	Immune_no_meta_analysis	msigdbSetsPruned	Go l Ascorbic Acid Metabolic Process	0.00115892899694269	2.93594317074959
+pvalue_0.01	PD	Immune_no_meta_analysis	msigdbSetsPruned	Go Carbohydrate Homeostasis	0.00126585913759	2.89761461909829
+pvalue_0.01	PD	Immune_no_meta_analysis	msigdbSetsPruned	Reactome Antigen Processing Cross Presentation	0.00160912353402432	2.79341061339901
+pvalue_0.01	PD	Immune_no_meta_analysis	msigdbSetsPruned	Go Lipid Import into Cell	0.00265902853458825	2.57527700213901
+pvalue_0.01	PD	Immune_no_meta_analysis	msigdbSetsPruned	Kegg Focal Adhesion	0.00327709626856509	2.48451080051799
+pvalue_0.01	PD	Immune_no_meta_analysis	msigdbSetsPruned	Biocarta Barrestin Src Pathway	0.00342099412456436	2.46584767169961
+pvalue_0.01	PD	Immune_no_meta_analysis	msigdbSetsPruned	Go Response to Nitrogen Compound	0.00357813225197785	2.44634361143697
+pvalue_0.01	PD	Immune_no_meta_analysis	msigdbSetsPruned	Go Insulin Secretion	0.00365483414330803	2.43713232658039
+pvalue_0.01	PD	Mural_no_meta_analysis	msigdbSetsPruned	Pid Pi3k Plc Trk Pathway	2.12697284348983e-06	5.67223805499516
+pvalue_0.01	PD	Mural_no_meta_analysis	msigdbSetsPruned	Biocarta Erk5 Pathway	5.22814099961902e-06	5.28165270828913
+pvalue_0.01	PD	Mural_no_meta_analysis	msigdbSetsPruned	Pid Ar Nongenomic Pathway	5.6702733989819e-05	4.24639600057682
+pvalue_0.01	PD	Mural_no_meta_analysis	msigdbSetsPruned	Pid Pi3kci Pathway	0.000234073390521135	3.63064795412343
+pvalue_0.01	PD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Signaling by Egfr	0.00026432882172224	3.57785547995385
+pvalue_0.01	PD	Mural_no_meta_analysis	msigdbSetsPruned	Go Response to l Glutamate	0.000272042737562705	3.56536286350387
+pvalue_0.01	PD	Mural_no_meta_analysis	msigdbSetsPruned	Go Response to Oxygen Levels	0.000280106226997083	3.5526772363374
+pvalue_0.01	PD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Diseases of Signal Transduction by Growth Factor Receptors and Second Messengers	0.000301278974239671	3.52103117596127
+pvalue_0.01	PD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Signaling by Fgfr4 in Disease	0.000331967259145048	3.47890474724118
+pvalue_0.01	PD	Mural_no_meta_analysis	msigdbSetsPruned	Pid Fcer1 Pathway	0.000389809005163999	3.40914813225827
+pvalue_0.01	PD	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Biotin Transport and Metabolism	0.00152992888958861	2.81532875452683
+pvalue_0.01	PD	OPC_no_meta_analysis	msigdbSetsPruned	Go Peptidyl Tyrosine Dephosphorylation	0.00258666441951268	2.58725991075284
+pvalue_0.01	PD	OPC_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Neuron Projection Regeneration	0.00304616238275611	2.51624694930752
+pvalue_0.01	PD	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Lgi Adam Interactions	0.00304616238275611	2.51624694930752
+pvalue_0.01	PD	OPC_no_meta_analysis	msigdbSetsPruned	Go Corpus Callosum Development	0.00398587769547837	2.39947603152459
+pvalue_0.01	PD	OPC_no_meta_analysis	syngoAll	Presynapse Assembly	0.00398587769547837	2.39947603152459
+pvalue_0.01	PD	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Synaptic Adhesion Like Molecules	0.005042759926217	2.29733170707406
+pvalue_0.01	PD	OPC_no_meta_analysis	syngoAll	Presynaptic Membrane	0.00608128746353866	2.2160044669248
+pvalue_0.01	PD	OPC_no_meta_analysis	msigdbSetsPruned	Go Regulation of Toll Like Receptor Signaling Pathway	0.00655880987319008	2.18317495824588
+pvalue_0.01	PD	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Defects in Vitamin and Cofactor Metabolism	0.00749663512734707	2.12513362641359
+pvalue_0.01	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Pid Fanconi Pathway	0.000410456753564412	3.38673259415414
+pvalue_0.01	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Protein Demethylation	0.00098916712591492	3.00473032545974
+pvalue_0.01	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Demethylation	0.0013559091654134	2.86776940359659
+pvalue_0.01	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Cell Adhesion Mediated by Integrin	0.00170432113834905	2.76844856950339
+pvalue_0.01	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Cellular Respiration	0.00177003824625995	2.75201734947989
+pvalue_0.01	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Pid Integrin A4b1 Pathway	0.0019965504003771	2.69971972211909
+pvalue_0.01	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Cellular Component Morphogenesis	0.00384550029756547	2.41504715070323
+pvalue_0.01	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Lipid Localization	0.00387000428319766	2.4122885543175
+pvalue_0.01	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Membrane Depolarization	0.00388458224819744	2.41065567880843
+pvalue_0.01	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Membrane Potential	0.00388485498890735	2.41062518759479
+pvalue_0.01	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Process Utilizing Autophagic Mechanism	8.45031652505614e-06	5.07312702329756
+pvalue_0.01	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Macroautophagy	2.23425077879347e-05	4.65086808201107
+pvalue_0.01	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Catabolic Process	0.000118879153359765	3.92489429655533
+pvalue_0.01	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Synaptic Vesicle Priming	0.000328647755449073	3.48326932945515
+pvalue_0.01	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Pid Lkb1 Pathway	0.000336339126315577	3.47322260828883
+pvalue_0.01	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Microtubule Polymerization	0.000365582305824059	3.43701483227337
+pvalue_0.01	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Biocarta P53hypoxia Pathway	0.000446343186771519	3.35033109014993
+pvalue_0.01	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Vesicle Fusion to Plasma Membrane	0.000668573067374466	3.17485112239832
+pvalue_0.01	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Pid Hdac Classi Pathway	0.000929682801327295	3.03166520320018
+pvalue_0.01	SCZ	Astro_no_meta_analysis	syngoAll	Synaptic Vesicle	0.000948788649342211	3.02283051955057
+pvalue_0.01	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Translational Elongation	0.00110227502953876	2.95771003079409
+pvalue_0.01	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Protein Targeting to Mitochondrion	0.00189173474173841	2.72313976025747
+pvalue_0.01	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Tissue Remodeling	0.00249713605032606	2.60255779553561
+pvalue_0.01	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Kegg Glioma	0.00256177225856972	2.59145948163378
+pvalue_0.01	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Natural Killer Cell Proliferation	0.00329582503032756	2.48203585230874
+pvalue_0.01	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Nk t Cell Activation	0.00329582503032756	2.48203585230874
+pvalue_0.01	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Opioid Receptor Signaling Pathway	0.00400506020605312	2.39739095100044
+pvalue_0.01	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Oligopeptide Transport	0.00477844698992756	2.32071322750803
+pvalue_0.01	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Protein Targeting	0.00494341450890168	2.30597297210424
+pvalue_0.01	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Kegg Bladder Cancer	0.00518133985920609	2.28555792013577
+pvalue_0.01	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Cell Migration Involved in Sprouting Angiogenesis	2.26548842540108e-05	4.64483815233153
+pvalue_0.01	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Sprouting Angiogenesis	0.000200922711454099	3.69697096966435
+pvalue_0.01	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Protein Localization to Endoplasmic Reticulum	0.000343713335237147	3.46380361797171
+pvalue_0.01	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Protein K63 Linked Deubiquitination	0.000482883421806702	3.31615770439766
+pvalue_0.01	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Organelle Assembly	0.000988869725387971	3.00486091899105
+pvalue_0.01	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Cellular Response to Vascular Endothelial Growth Factor Stimulus	0.00141131340072753	2.85037653472676
+pvalue_0.01	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Endoplasmic Reticulum Organization	0.00151898723752844	2.81844587504719
+pvalue_0.01	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Localization Within Membrane	0.00400748530087635	2.39712806192703
+pvalue_0.01	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Response to Abiotic Stimulus	0.00603506639738219	2.21931794746256
+pvalue_0.01	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Ameboidal Type Cell Migration	0.00660301070299083	2.18025799876726
+pvalue_0.01	SCZ	IN_no_meta_analysis	syngoAll	Synapse	4.75649771891862e-05	4.32271270719249
+pvalue_0.01	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Organelle Disassembly	6.19033734443401e-05	4.20828568331685
+pvalue_0.01	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Macromolecule Catabolic Process	8.4729527014493e-05	4.07196521794776
+pvalue_0.01	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Vesicle Budding from Membrane	0.000122539260492347	3.91172474490387
+pvalue_0.01	SCZ	IN_no_meta_analysis	syngoAll	Process in the Synapse	0.000139115332585417	3.85662500163791
+pvalue_0.01	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Nucleotide Biosynthetic Process	0.000156292087603264	3.80606300788755
+pvalue_0.01	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Autophagy of Mitochondrion	0.000156292087603264	3.80606300788755
+pvalue_0.01	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Atp Biosynthetic Process	0.000168619180593165	3.77309302548839
+pvalue_0.01	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Membrane Organization	0.000176870990486849	3.75234339210223
+pvalue_0.01	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Process Utilizing Autophagic Mechanism	0.000205940331113545	3.68625859332935
+pvalue_0.01	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Cellular Amino Acid Catabolic Process	0.000855047549022618	3.0680097335713
+pvalue_0.01	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Cell Cycle G2 m Phase Transition	0.00117943384961592	2.92832641217764
+pvalue_0.01	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Cellular Amino Acid Biosynthetic Process	0.00131586688444729	2.88078804254125
+pvalue_0.01	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Regulation of Intrinsic Apoptotic Signaling Pathway in Response to Dna Damage	0.00164982595786607	2.78256186761946
+pvalue_0.01	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Intrinsic Apoptotic Signaling Pathway	0.00172780985506466	2.76250405319966
+pvalue_0.01	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Response to Fungicide	0.00200253346882112	2.69842021671545
+pvalue_0.01	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Scf Dependent Proteasomal Ubiquitin Dependent Protein Catabolic Process	0.00206474266484825	2.68513406807565
+pvalue_0.01	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Intrinsic Apoptotic Signaling Pathway	0.00273707228397823	2.56271373305449
+pvalue_0.01	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Gluconeogenesis	0.00281715027636614	2.55018998565326
+pvalue_0.01	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Membrane Potential	0.00327346126679403	2.48499279349779
+pvalue_0.01	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Membrane Docking	0.0006810727559291	3.16680649188932
+pvalue_0.01	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Organelle Biogenesis and Maintenance	0.000925914195436935	3.03342925756737
+pvalue_0.01	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Response to Macrophage Colony Stimulating Factor	0.0010166303255082	2.99283693968108
+pvalue_0.01	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Cytoskeleton Organization	0.00107296850969826	2.96941302385415
+pvalue_0.01	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Cellular Macromolecule Localization	0.00197274220329658	2.7049296643681
+pvalue_0.01	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Hindbrain Development	0.00259501028130196	2.58586091715893
+pvalue_0.01	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Inflammasomes	0.00286667652752137	2.54262130957816
+pvalue_0.01	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Chaperone Mediated Autophagy	0.00286667652752137	2.54262130957816
+pvalue_0.01	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Ventricular Septum Development	0.00301151533586388	2.52121492088321
+pvalue_0.01	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Retina Layer Formation	0.00316025108489162	2.50027841090978
+pvalue_0.01	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Post Translational Modification Synthesis of Gpi Anchored Proteins	0.00131986381721115	2.87947087673719
+pvalue_0.01	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Post Translational Protein Modification	0.0019857658626068	2.70207195955279
+pvalue_0.01	SCZ	OPC_no_meta_analysis	syngoAll	Presynapse Assembly	0.00315780436193925	2.50061477969888
+pvalue_0.01	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Response to Salt Stress	0.00826411250070079	2.08280377932713
+pvalue_0.01	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Protein K48 Linked Deubiquitination	0.0109109470821611	1.96213755053863
+pvalue_0.01	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Mitochondrial Biogenesis	0.0113382463916831	1.94545410957951
+pvalue_0.01	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Protein K63 Linked Deubiquitination	0.0116236556009218	1.93465726629736
+pvalue_0.01	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Response to Leukemia Inhibitory Factor	0.0127810808582862	1.89343241762202
+pvalue_0.01	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Nucleoside Phosphate Biosynthetic Process	0.0130386051455876	1.88476886642434
+pvalue_0.01	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Pid Il2 Pi3k Pathway	0.0131086717928299	1.88244131000839
+pvalue_0.01	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Protein K48 Linked Ubiquitination	0.000432498573700296	3.36401532041908
+pvalue_0.01	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Interleukin 8 Secretion	0.00080043045990405	3.09667639290371
+pvalue_0.01	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Attachment of Spindle Microtubules to Kinetochore	0.00130164405674786	2.8855077602566
+pvalue_0.01	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Intracellular Signal Transduction	0.0016814862243324	2.774306686316
+pvalue_0.01	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Response to Topologically Incorrect Protein	0.00191154056770551	2.71861648072437
+pvalue_0.01	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Axon Extension	0.00196520441689397	2.70659226843783
+pvalue_0.01	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Toxin Transport	0.00196520441689397	2.70659226843783
+pvalue_0.01	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Axon Guidance	0.00227978386418128	2.64210632450955
+pvalue_0.01	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Negative Chemotaxis	0.00262389609160955	2.58105336736578
+pvalue_0.01	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Reactome Caspase Mediated Cleavage of Cytoskeletal Proteins	0.00269920135659762	2.56876471648186
+pvalue_0.05	AD	Astro_no_meta_analysis	msigdbSetsPruned	Pid Tap63 Pathway	0.000139891789927857	3.85420777295389
+pvalue_0.05	AD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Signaling by Receptor Tyrosine Kinases	0.000266295720328308	3.57463581310569
+pvalue_0.05	AD	Astro_no_meta_analysis	msigdbSetsPruned	Go Protein Localization to Membrane	0.000312027648485334	3.50580692183859
+pvalue_0.05	AD	Astro_no_meta_analysis	syngoAll	Trans Synaptic Signaling	0.000343789384018628	3.46370753815889
+pvalue_0.05	AD	Astro_no_meta_analysis	syngoAll	Synaptic Signaling	0.000395328991268399	3.40304133570456
+pvalue_0.05	AD	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Cell Aging	0.000432268712375427	3.36424619757864
+pvalue_0.05	AD	Astro_no_meta_analysis	msigdbSetsPruned	Go Non Motile Cilium Assembly	0.000653573719495857	3.18470541930826
+pvalue_0.05	AD	Astro_no_meta_analysis	msigdbSetsPruned	Go Viral Gene Expression	0.000777057980588911	3.10954657487944
+pvalue_0.05	AD	Astro_no_meta_analysis	msigdbSetsPruned	Kegg Rna Polymerase	0.000895242863224232	3.04805913244919
+pvalue_0.05	AD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Circadian Clock	0.00105098054571539	2.97840532295049
+pvalue_0.05	AD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Neurotransmitter Receptors and Postsynaptic Signal Transmission	0.000282216393560763	3.54941776228192
+pvalue_0.05	AD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Neuronal System	0.000822737644756919	3.08473863088614
+pvalue_0.05	AD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Trafficking of Ampa Receptors	0.00114327503009205	2.94184928169286
+pvalue_0.05	AD	EN_no_meta_analysis	msigdbSetsPruned	Go Small Molecule Metabolic Process	0.00172873503463412	2.76227156648
+pvalue_0.05	AD	EN_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Meiotic Cell Cycle	0.00225420621600463	2.64700635697832
+pvalue_0.05	AD	EN_no_meta_analysis	msigdbSetsPruned	Go Eating Behavior	0.00236934903377029	2.62537095773445
+pvalue_0.05	AD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Gaba Receptor Activation	0.00289007315588923	2.53909116388812
+pvalue_0.05	AD	EN_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Cellular Amide Metabolic Process	0.00296439110612011	2.52806449839028
+pvalue_0.05	AD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Diseases of Programmed Cell Death	0.00338395468180678	2.4705754617007
+pvalue_0.05	AD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Wnt5a Dependent Internalization of Fzd4	0.0033906471400237	2.46971740429868
+pvalue_0.05	AD	Endo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Cell Morphogenesis	1.76429646745011e-06	5.75342843544043
+pvalue_0.05	AD	Endo_no_meta_analysis	msigdbSetsPruned	Go Cellular Component Morphogenesis	3.6839964579982e-06	5.43368079603018
+pvalue_0.05	AD	Endo_no_meta_analysis	syngoAll	Process in the Synapse	4.51243879729937e-06	5.34558867542987
+pvalue_0.05	AD	Endo_no_meta_analysis	syngoAll	Synapse	8.05718763401952e-06	5.09381652248349
+pvalue_0.05	AD	Endo_no_meta_analysis	syngoAll	Synapse Organization	1.22666332343939e-05	4.9112746196987
+pvalue_0.05	AD	Endo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Cell Projection Organization	2.67586535348172e-05	4.57253574356158
+pvalue_0.05	AD	Endo_no_meta_analysis	syngoAll	Presynapse	2.8824045234075e-05	4.54024506933908
+pvalue_0.05	AD	Endo_no_meta_analysis	msigdbSetsPruned	Go Cellular Macromolecule Localization	9.02238075294554e-05	4.04467884921636
+pvalue_0.05	AD	Endo_no_meta_analysis	msigdbSetsPruned	Go Cytoplasmic Translation	9.40520951050894e-05	4.02663152565911
+pvalue_0.05	AD	Endo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Gtpase Activity	0.000108415674871118	3.96490792242966
+pvalue_0.05	AD	IN_no_meta_analysis	msigdbSetsPruned	Go Activation of Mapkkk Activity	2.84755483741061e-05	4.54552790364728
+pvalue_0.05	AD	IN_no_meta_analysis	msigdbSetsPruned	Reactome Met Activates Ptk2 Signaling	0.000436344854455129	3.36017014103316
+pvalue_0.05	AD	IN_no_meta_analysis	msigdbSetsPruned	Biocarta Carm1 Pathway	0.000518857456524173	3.2849519376193
+pvalue_0.05	AD	IN_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Cysteine Type Endopeptidase Activity	0.000533971481048394	3.27248193764197
+pvalue_0.05	AD	IN_no_meta_analysis	msigdbSetsPruned	Biocarta Mpr Pathway	0.000567924748935284	3.24570920528761
+pvalue_0.05	AD	IN_no_meta_analysis	msigdbSetsPruned	Biocarta Gata3 Pathway	0.000994043137674518	3.00259476847241
+pvalue_0.05	AD	IN_no_meta_analysis	msigdbSetsPruned	Go Response to Angiotensin	0.00109068791747447	2.96229949790621
+pvalue_0.05	AD	IN_no_meta_analysis	msigdbSetsPruned	Go Sulfur Amino Acid Catabolic Process	0.00131943804786601	2.87961099657813
+pvalue_0.05	AD	IN_no_meta_analysis	msigdbSetsPruned	Biocarta Vip Pathway	0.00159624915861694	2.79689931864512
+pvalue_0.05	AD	IN_no_meta_analysis	msigdbSetsPruned	Pid P38 Mkk3 6pathway	0.00159624915861694	2.79689931864512
+pvalue_0.05	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Regulation of Vesicle Mediated Transport	0.000100331603867054	3.99856224521355
+pvalue_0.05	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Regulation of Catabolic Process	0.000235950579375183	3.62717895191232
+pvalue_0.05	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Exocytosis	0.000280602628598762	3.55190826495203
+pvalue_0.05	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Myelin Maintenance	0.000389742986524848	3.40922169125384
+pvalue_0.05	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Substrate Dependent Cell Migration	0.000748453685385358	3.12583506880643
+pvalue_0.05	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Circadian Regulation of Gene Expression	0.000805794082387627	3.09377592631949
+pvalue_0.05	AD	Immune_no_meta_analysis	msigdbSetsPruned	Reactome Rna Polymerase Ii Transcription	0.000980340723369034	3.00862295638774
+pvalue_0.05	AD	Immune_no_meta_analysis	msigdbSetsPruned	Pid P53 Downstream Pathway	0.00103758881238071	2.98397471960277
+pvalue_0.05	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Cell Death	0.00104783083464116	2.97970882566525
+pvalue_0.05	AD	Immune_no_meta_analysis	msigdbSetsPruned	Go Protein Localization to Cilium	0.00195378915198834	2.70912230605676
+pvalue_0.05	AD	Mural_no_meta_analysis	msigdbSetsPruned	Go Cellular Macromolecule Localization	7.35906123139385e-05	4.13317758349251
+pvalue_0.05	AD	Mural_no_meta_analysis	msigdbSetsPruned	Go Macromolecule Catabolic Process	0.000111645370801991	3.95215927955027
+pvalue_0.05	AD	Mural_no_meta_analysis	msigdbSetsPruned	Go Protein Containing Complex Localization	0.000360296654897185	3.44333976997967
+pvalue_0.05	AD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Metabolism of Rna	0.00060484805978194	3.21835370813375
+pvalue_0.05	AD	Mural_no_meta_analysis	msigdbSetsPruned	Go Chromosome Organization	0.000731872202385022	3.13556474769092
+pvalue_0.05	AD	Mural_no_meta_analysis	msigdbSetsPruned	Go Digestive System Development	0.000745627765552871	3.12747792817301
+pvalue_0.05	AD	Mural_no_meta_analysis	msigdbSetsPruned	Go Translational Initiation	0.000747560983736086	3.12635337314432
+pvalue_0.05	AD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Chromatin Modifying Enzymes	0.000943105393684433	3.02543977137939
+pvalue_0.05	AD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Selenoamino Acid Metabolism	0.00105467059574809	2.97688316196558
+pvalue_0.05	AD	Mural_no_meta_analysis	msigdbSetsPruned	Go Protein Localization to Cell Periphery	0.00124956766237078	2.90324022245177
+pvalue_0.05	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Post Embryonic Animal Organ Development	4.7260086077927e-05	4.32550549169361
+pvalue_0.05	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Protein Localization to Chromosome	7.34824620946495e-05	4.1338163007031
+pvalue_0.05	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Cellular Macromolecule Localization	0.000104706024835597	3.98002832808645
+pvalue_0.05	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Protein Localization to Organelle	0.000144960740616933	3.83874960081361
+pvalue_0.05	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Organelle Assembly	0.00025762385463851	3.58901392602411
+pvalue_0.05	AD	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Signaling by Robo Receptors	0.000472500756704921	3.32559749163618
+pvalue_0.05	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Chromosome Organization	0.00049389367130854	3.30636653879773
+pvalue_0.05	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Regulation of Chromosome Organization	0.000549073708903581	3.26036935095727
+pvalue_0.05	AD	OPC_no_meta_analysis	msigdbSetsPruned	Go Appendage Development	0.000625531213010093	3.20375101482773
+pvalue_0.05	AD	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Tcr Signaling	0.000683212010587478	3.16544450753273
+pvalue_0.05	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Reactome Chondroitin Sulfate Dermatan Sulfate Metabolism	0.000150248974279596	3.82318848415871
+pvalue_0.05	AD	Oligo_no_meta_analysis	syngoAll	Regulation of Presynaptic Membrane Potential	0.000309733089613065	3.50901239532546
+pvalue_0.05	AD	Oligo_no_meta_analysis	syngoAll	Presynaptic Membrane	0.000356166056750234	3.44834747192636
+pvalue_0.05	AD	Oligo_no_meta_analysis	syngoAll	Postsynaptic Cytoskeleton	0.000523513027936298	3.28107250617149
+pvalue_0.05	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Interspecies Interaction Between Organisms	0.000614955267860067	3.21115647386374
+pvalue_0.05	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Apoptotic Signaling Pathway	0.000680244815340781	3.16733475962166
+pvalue_0.05	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Pid Tnf Pathway	0.000784032311530869	3.1056660388074
+pvalue_0.05	AD	Oligo_no_meta_analysis	syngoAll	Synapse	0.000864631040107383	3.06316917742442
+pvalue_0.05	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Catabolic Process	0.000950851524622268	3.02188729281171
+pvalue_0.05	AD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Axonogenesis	0.000978778711934442	3.0093154849577
+pvalue_0.05	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Cellular Macromolecule Localization	8.0798600053895e-06	5.09259616390531
+pvalue_0.05	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Receptor Mediated Endocytosis	0.000147674733010533	3.83069380565493
+pvalue_0.05	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Protein Targeting	0.000253359933841966	3.59626206304028
+pvalue_0.05	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Protein Targeting	0.000327734216249936	3.48447821484953
+pvalue_0.05	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Intracellular Protein Transport	0.000515207455825179	3.28801786070977
+pvalue_0.05	BD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Gap Junction Degradation	0.000548500620942964	3.26082287643576
+pvalue_0.05	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Endomembrane System Organization	0.000628965895251731	3.20137290289422
+pvalue_0.05	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Protein Targeting to Membrane	0.000806216010419017	3.09354858156427
+pvalue_0.05	BD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Eph Ephrin Signaling	0.00103182038723238	2.98639589536652
+pvalue_0.05	BD	Astro_no_meta_analysis	msigdbSetsPruned	Go Protein Localization to Organelle	0.00104816130910484	2.97957187549814
+pvalue_0.05	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Cell Junction Organization	5.4781371710341e-05	4.26136709733263
+pvalue_0.05	BD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Abc Family Proteins Mediated Transport	0.000291636929350939	3.53515748310493
+pvalue_0.05	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Phosphatidylinositol 3 Phosphate Biosynthetic Process	0.000317699089154869	3.49798403029587
+pvalue_0.05	BD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Synthesis of Pips at the Early Endosome Membrane	0.000458185403853693	3.33895874999334
+pvalue_0.05	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Organelle Localization	0.000563898846506341	3.24879879378981
+pvalue_0.05	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Protein Adp Ribosylation	0.00104610703143942	2.98042387877132
+pvalue_0.05	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Microtubule Based Movement	0.00128516409930409	2.89104141484469
+pvalue_0.05	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Ensheathment of Neurons	0.00136153141999587	2.86597233201526
+pvalue_0.05	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Fibroblast Migration	0.00147613145505155	2.83087496523562
+pvalue_0.05	BD	EN_no_meta_analysis	msigdbSetsPruned	Go Microtubule Based Process	0.00154492055571367	2.81109384834417
+pvalue_0.05	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Modification Dependent Macromolecule Catabolic Process	3.04882532417552e-05	4.51586745688086
+pvalue_0.05	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Macromolecule Catabolic Process	6.33806431441134e-05	4.19804335819522
+pvalue_0.05	BD	Endo_no_meta_analysis	msigdbSetsPruned	Kegg Ubiquitin Mediated Proteolysis	8.27444615794576e-05	4.08226106566072
+pvalue_0.05	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Protein Modification by Small Protein Conjugation or Removal	0.000109196734815791	3.96179034764488
+pvalue_0.05	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Response to Stimulus	0.000312078833856937	3.50573568551876
+pvalue_0.05	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Stem Cell Differentiation	0.000396084443568826	3.40221221441189
+pvalue_0.05	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Organic Cyclic Compound Catabolic Process	0.000495015333341961	3.30538134837418
+pvalue_0.05	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Muscle Structure Development	0.000536761692064331	3.27021848672643
+pvalue_0.05	BD	Endo_no_meta_analysis	msigdbSetsPruned	Go Protein Phosphorylation	0.000553438202775106	3.25693086564722
+pvalue_0.05	BD	Endo_no_meta_analysis	msigdbSetsPruned	Pid Cmyb Pathway	0.000611689670249551	3.21346885347555
+pvalue_0.05	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Microtubule Based Process	6.50858192267569e-05	4.18651362437244
+pvalue_0.05	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Microtubule Based Process	0.000145035139620787	3.83852676263042
+pvalue_0.05	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Central Nervous System Neuron Axonogenesis	0.000195369572332813	3.70914307417379
+pvalue_0.05	BD	IN_no_meta_analysis	msigdbSetsPruned	Reactome Intraflagellar Transport	0.000597302490226116	3.22380567462308
+pvalue_0.05	BD	IN_no_meta_analysis	msigdbSetsPruned	Reactome Interleukin 35 Signalling	0.000622379162835392	3.20594495589159
+pvalue_0.05	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Microtubule Based Movement	0.00103976732037879	2.98306383645254
+pvalue_0.05	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Response to Cold	0.00110916957325345	2.95500205249967
+pvalue_0.05	BD	IN_no_meta_analysis	msigdbSetsPruned	Sig Pip3 Signaling in b Lymphocytes	0.00113041512487488	2.946762040291
+pvalue_0.05	BD	IN_no_meta_analysis	msigdbSetsPruned	Go Nad Biosynthesis via Nicotinamide Riboside Salvage Pathway	0.00118917253580093	2.92475512947706
+pvalue_0.05	BD	IN_no_meta_analysis	syngoAll	Regulation of Presynaptic Cytosolic Calcium Levels	0.00197256678027495	2.70496828504428
+pvalue_0.05	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Mrna Metabolic Process	7.99879331930286e-05	4.09697552479494
+pvalue_0.05	BD	Immune_no_meta_analysis	msigdbSetsPruned	Reactome Processing of Capped Intron Containing Pre Mrna	0.000109633286717852	3.96005756589664
+pvalue_0.05	BD	Immune_no_meta_analysis	msigdbSetsPruned	Reactome Metabolism of Rna	0.000150690520412752	3.82191406727344
+pvalue_0.05	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Cellular Macromolecule Localization	0.000277850179169998	3.55618931882636
+pvalue_0.05	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Rna Processing	0.000341688194191997	3.46637002642759
+pvalue_0.05	BD	Immune_no_meta_analysis	msigdbSetsPruned	Go Mrna Export from Nucleus	0.000355629732098289	3.44900193739125
+pvalue_0.05	BD	Immune_no_meta_analysis	msigdbSetsPruned	Biocarta Hsp27 Pathway	0.00047631236419428	3.32210814485487
+pvalue_0.05	BD	Immune_no_meta_analysis	msigdbSetsPruned	Reactome Death Receptor Signalling	0.000518105670060901	3.28558165484145
+pvalue_0.05	BD	Immune_no_meta_analysis	msigdbSetsPruned	Reactome Sumoylation of Dna Damage Response and Repair Proteins	0.000686938079254771	3.16308240857356
+pvalue_0.05	BD	Immune_no_meta_analysis	msigdbSetsPruned	Pid Ps1 Pathway	0.000991530850648026	3.00369376854112
+pvalue_0.05	BD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Disease	3.61646579860347e-05	4.44171563772794
+pvalue_0.05	BD	Mural_no_meta_analysis	msigdbSetsPruned	Go Modification Dependent Macromolecule Catabolic Process	5.39836873518838e-05	4.26773745431298
+pvalue_0.05	BD	Mural_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Cell Death	6.01333190812596e-05	4.22088482444497
+pvalue_0.05	BD	Mural_no_meta_analysis	msigdbSetsPruned	Go Proteolysis	7.74415133282276e-05	4.11102616882367
+pvalue_0.05	BD	Mural_no_meta_analysis	msigdbSetsPruned	Go Protein Polyubiquitination	0.000123101773785242	3.90973568923284
+pvalue_0.05	BD	Mural_no_meta_analysis	msigdbSetsPruned	Go Macromolecule Catabolic Process	0.000125686280354854	3.90071212638222
+pvalue_0.05	BD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Signaling by Hedgehog	0.000227130193104719	3.64372512986139
+pvalue_0.05	BD	Mural_no_meta_analysis	msigdbSetsPruned	Go Regulation of Catabolic Process	0.000354684731322776	3.45015750689031
+pvalue_0.05	BD	Mural_no_meta_analysis	msigdbSetsPruned	Go Regulation of Protein Modification by Small Protein Conjugation or Removal	0.000816541360684289	3.08802181183116
+pvalue_0.05	BD	Mural_no_meta_analysis	msigdbSetsPruned	Go Regulation of Proteolysis	0.000892711745612871	3.04928875107659
+pvalue_0.05	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Regulation of Protein Catabolic Process	1.18213482971006e-07	6.92733298668689
+pvalue_0.05	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Macromolecule Catabolic Process	1.91091379220362e-06	5.71875890499876
+pvalue_0.05	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Cell Projection Organization	3.72301585599895e-06	5.42910511415545
+pvalue_0.05	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Regulation of Catabolic Process	7.50285611169119e-06	5.12477338228471
+pvalue_0.05	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Neurogenesis	1.15743750458591e-05	4.93650244924842
+pvalue_0.05	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Ensheathment of Neurons	3.82823528446795e-05	4.41700137820816
+pvalue_0.05	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Regulation of Organelle Organization	4.58508132485434e-05	4.33865295691386
+pvalue_0.05	BD	OPC_no_meta_analysis	syngoAll	Synapse	5.12122123268315e-05	4.29062646258424
+pvalue_0.05	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Regulation of Cellular Component Biogenesis	5.46289880462338e-05	4.2625768443327
+pvalue_0.05	BD	OPC_no_meta_analysis	msigdbSetsPruned	Go Walking Behavior	6.12658247905827e-05	4.21278171542773
+pvalue_0.05	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Cell Projection Organization	6.18088402909179e-05	4.20894940492751
+pvalue_0.05	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Termination of Rna Polymerase Ii Transcription	0.000640732367779087	3.19332333626601
+pvalue_0.05	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Neurogenesis	0.00100484654089179	2.99790025817655
+pvalue_0.05	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Axonogenesis	0.00111384390815804	2.95317566605221
+pvalue_0.05	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Axon Development	0.00122847715055562	2.91063291690461
+pvalue_0.05	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Cell Projection Organization	0.00150869967238258	2.82139720396739
+pvalue_0.05	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Axon Guidance	0.00155594951625853	2.80800449807
+pvalue_0.05	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Dna Templated Transcription Termination	0.0024041161684437	2.61904455077282
+pvalue_0.05	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Epithelial Cell Differentiation	0.00287634998364814	2.54115827172462
+pvalue_0.05	BD	Oligo_no_meta_analysis	msigdbSetsPruned	Reactome Vxpx Cargo Targeting to Cilium	0.00329077526244382	2.48270177605058
+pvalue_0.05	PD	Astro_no_meta_analysis	msigdbSetsPruned	Kegg Colorectal Cancer	1.98022183672317e-06	5.70328615465356
+pvalue_0.05	PD	Astro_no_meta_analysis	msigdbSetsPruned	Biocarta Gleevec Pathway	4.55947837980409e-05	4.34108483929402
+pvalue_0.05	PD	Astro_no_meta_analysis	msigdbSetsPruned	Pid Erbb2 Erbb3 Pathway	4.94865313947871e-05	4.30551298564925
+pvalue_0.05	PD	Astro_no_meta_analysis	msigdbSetsPruned	Go Cellular Response to Inorganic Substance	4.9583215135195e-05	4.30466531560366
+pvalue_0.05	PD	Astro_no_meta_analysis	msigdbSetsPruned	Go Adherens Junction Organization	0.000114288069038002	3.94199910487516
+pvalue_0.05	PD	Astro_no_meta_analysis	msigdbSetsPruned	Biocarta Tgfb Pathway	0.000193126431585514	3.71415828393072
+pvalue_0.05	PD	Astro_no_meta_analysis	msigdbSetsPruned	Go Toll Like Receptor 9 Signaling Pathway	0.000251202523705096	3.59997600177524
+pvalue_0.05	PD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Diseases of Signal Transduction by Growth Factor Receptors and Second Messengers	0.000342370883493092	3.46550317645973
+pvalue_0.05	PD	Astro_no_meta_analysis	msigdbSetsPruned	Reactome Adherens Junctions Interactions	0.000388043348289227	3.41111975669638
+pvalue_0.05	PD	Astro_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Erbb Signaling Pathway	0.000388043348289227	3.41111975669638
+pvalue_0.05	PD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Unfolded Protein Response Upr	0.000179462870469894	3.74602539008295
+pvalue_0.05	PD	EN_no_meta_analysis	msigdbSetsPruned	Kegg Ppar Signaling Pathway	0.00021992663934321	3.65772216209422
+pvalue_0.05	PD	EN_no_meta_analysis	msigdbSetsPruned	Kegg Calcium Signaling Pathway	0.000237376455470861	3.62456235937541
+pvalue_0.05	PD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Synthesis of Pips at the Golgi Membrane	0.000342928564455613	3.46479633853983
+pvalue_0.05	PD	EN_no_meta_analysis	msigdbSetsPruned	Go Amino Sugar Catabolic Process	0.000372911756612267	3.4283939246265
+pvalue_0.05	PD	EN_no_meta_analysis	msigdbSetsPruned	Go n Acetylneuraminate Metabolic Process	0.000372911756612267	3.4283939246265
+pvalue_0.05	PD	EN_no_meta_analysis	msigdbSetsPruned	Biocarta 41bb Pathway	0.000459936496683042	3.33730212710967
+pvalue_0.05	PD	EN_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Protein Localization to Cell Periphery	0.000556319939732461	3.25467537370903
+pvalue_0.05	PD	EN_no_meta_analysis	msigdbSetsPruned	Reactome Platelet Calcium Homeostasis	0.000691143793867396	3.16043158737778
+pvalue_0.05	PD	EN_no_meta_analysis	msigdbSetsPruned	Go Rna Phosphodiester Bond Hydrolysis Exonucleolytic	0.000727105409781771	3.13840262412297
+pvalue_0.05	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Cellular Component Organization	3.01045621046714e-05	4.52136768557718
+pvalue_0.05	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Membrane Organization	5.42111236015688e-05	4.26591159126388
+pvalue_0.05	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Organelle Organization	0.000145274645809953	3.83781017472912
+pvalue_0.05	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Post Golgi Vesicle Mediated Transport	0.000216379089182121	3.66478471164133
+pvalue_0.05	PD	Endo_no_meta_analysis	msigdbSetsPruned	Reactome Vesicle Mediated Transport	0.000229718417702991	3.63880418379443
+pvalue_0.05	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Cell Projection Organization	0.000347173487039799	3.45945344844938
+pvalue_0.05	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Protein Stability	0.000640145996415077	3.19372096631839
+pvalue_0.05	PD	Endo_no_meta_analysis	msigdbSetsPruned	Reactome Response to Elevated Platelet Cytosolic Ca2	0.000850097385892018	3.07053131930589
+pvalue_0.05	PD	Endo_no_meta_analysis	msigdbSetsPruned	Pid Pdgfrb Pathway	0.00104424914556429	2.98119587141536
+pvalue_0.05	PD	Endo_no_meta_analysis	msigdbSetsPruned	Go Vesicle Mediated Transport to the Plasma Membrane	0.00107576087211033	2.96828425605306
+pvalue_0.05	PD	IN_no_meta_analysis	msigdbSetsPruned	Go Protein Targeting to Membrane	1.23372557353298e-05	4.90878143281054
+pvalue_0.05	PD	IN_no_meta_analysis	msigdbSetsPruned	Go Protein Localization to Membrane	2.31320343591832e-05	4.63578617128836
+pvalue_0.05	PD	IN_no_meta_analysis	msigdbSetsPruned	Go Kinetochore Organization	4.62541850177273e-05	4.33484896675459
+pvalue_0.05	PD	IN_no_meta_analysis	msigdbSetsPruned	Go Rna Methylation	0.000126709801041562	3.89718979100732
+pvalue_0.05	PD	IN_no_meta_analysis	msigdbSetsPruned	Reactome Metabolism of Rna	0.000231482477872631	3.63548187743753
+pvalue_0.05	PD	IN_no_meta_analysis	msigdbSetsPruned	Go Hematopoietic Stem Cell Proliferation	0.000518628843664008	3.28514333350617
+pvalue_0.05	PD	IN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Protein Targeting to Membrane	0.00067278365738269	3.17212456654831
+pvalue_0.05	PD	IN_no_meta_analysis	msigdbSetsPruned	Go Protein Targeting	0.00072198476062548	3.14147196925323
+pvalue_0.05	PD	IN_no_meta_analysis	msigdbSetsPruned	Go Cellular Macromolecule Localization	0.000795370458351683	3.09943054361545
+pvalue_0.05	PD	IN_no_meta_analysis	msigdbSetsPruned	Reactome Response of Eif2ak1 Hri to Heme Deficiency	0.000922792933044644	3.03489574006281
+pvalue_0.05	PD	Immune_no_meta_analysis	syngoAll	Process in the Synapse	0.000205820344018125	3.68651170023374
+pvalue_0.05	PD	Immune_no_meta_analysis	msigdbSetsPruned	Go Regulation of Proteasomal Protein Catabolic Process	0.000228893177235562	3.64036715242422
+pvalue_0.05	PD	Immune_no_meta_analysis	msigdbSetsPruned	Go Organonitrogen Compound Biosynthetic Process	0.000389598722348177	3.40938247601839
+pvalue_0.05	PD	Immune_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Blood Vessel Diameter	0.000790353364865397	3.10217869339404
+pvalue_0.05	PD	Immune_no_meta_analysis	msigdbSetsPruned	Go Pri Mirna Transcription by Rna Polymerase Ii	0.00132613959785097	2.87741075693782
+pvalue_0.05	PD	Immune_no_meta_analysis	msigdbSetsPruned	Reactome Antigen Processing Cross Presentation	0.00133554862080005	2.8743402968146
+pvalue_0.05	PD	Immune_no_meta_analysis	syngoAll	Synapse	0.00260188540624083	2.58471183480487
+pvalue_0.05	PD	Immune_no_meta_analysis	msigdbSetsPruned	Biocarta Nthi Pathway	0.00271632860671374	2.56601769262059
+pvalue_0.05	PD	Immune_no_meta_analysis	msigdbSetsPruned	Go Response to Gravity	0.00283429478434743	2.54755498240274
+pvalue_0.05	PD	Immune_no_meta_analysis	syngoAll	Metabolism	0.00297949421423378	2.52585745357827
+pvalue_0.05	PD	Mural_no_meta_analysis	msigdbSetsPruned	Go Macromolecule Catabolic Process	6.8089272637989e-06	5.1669213051372
+pvalue_0.05	PD	Mural_no_meta_analysis	msigdbSetsPruned	Pid Pi3kci Pathway	3.62306867525535e-05	4.4409234338369
+pvalue_0.05	PD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Diseases of Signal Transduction by Growth Factor Receptors and Second Messengers	0.000112144112622235	3.95022352121423
+pvalue_0.05	PD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Hdr Through Single Strand Annealing Ssa	0.000128935611765327	3.88962711478673
+pvalue_0.05	PD	Mural_no_meta_analysis	msigdbSetsPruned	Go Ribosomal Small Subunit Biogenesis	0.000155866993208442	3.80724584238078
+pvalue_0.05	PD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Tcr Signaling	0.000170360576706695	3.76863089841684
+pvalue_0.05	PD	Mural_no_meta_analysis	msigdbSetsPruned	Go Response to l Glutamate	0.000247057485184978	3.60720198360704
+pvalue_0.05	PD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Transcriptional Regulation by Tp53	0.000258897106492007	3.58687280333715
+pvalue_0.05	PD	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Hdr Through Homologous Recombination Hrr	0.000260022939010389	3.58498833723616
+pvalue_0.05	PD	Mural_no_meta_analysis	msigdbSetsPruned	Go Interspecies Interaction Between Organisms	0.000355812509503421	3.44877878724478
+pvalue_0.05	PD	OPC_no_meta_analysis	msigdbSetsPruned	Naba Basement Membranes	0.000142622407885039	3.84581223566017
+pvalue_0.05	PD	OPC_no_meta_analysis	msigdbSetsPruned	Go Regulation of Neuromuscular Junction Development	0.000250866849136873	3.6005567248478
+pvalue_0.05	PD	OPC_no_meta_analysis	msigdbSetsPruned	Go Beta Catenin Tcf Complex Assembly	0.000268069828193563	3.57175206399708
+pvalue_0.05	PD	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Rna Polymerase Ii Transcription	0.000423250777735324	3.37340223518985
+pvalue_0.05	PD	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Post Translational Protein Modification	0.000857379053538866	3.06682713085992
+pvalue_0.05	PD	OPC_no_meta_analysis	msigdbSetsPruned	Go Synapse Organization	0.000954001422179273	3.02045097787017
+pvalue_0.05	PD	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Regulation of Lipid Metabolism by Pparalpha	0.00108122085358178	2.96608558662467
+pvalue_0.05	PD	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Signaling by Notch1	0.00139080853737693	2.85673265209554
+pvalue_0.05	PD	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Post Translational Modification Synthesis of Gpi Anchored Proteins	0.00185034985946707	2.73274614853176
+pvalue_0.05	PD	OPC_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Lipid Storage	0.00195811208755575	2.70816245164745
+pvalue_0.05	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Generation of Precursor Metabolites and Energy	2.30476095421531e-05	4.63737411220442
+pvalue_0.05	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Cellular Respiration	4.86235322740665e-05	4.31315349486715
+pvalue_0.05	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Oxidation Reduction Process	0.000226546369707161	3.64484289278199
+pvalue_0.05	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Reactome the Citric Acid Tca Cycle and Respiratory Electron Transport	0.000288083599891091	3.54048146466139
+pvalue_0.05	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Cellular Component Morphogenesis	0.000346833188216052	3.45987935188364
+pvalue_0.05	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Atp Metabolic Process	0.000380456940650253	3.41969448868628
+pvalue_0.05	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Axon Extension	0.000387498296111048	3.41173020281237
+pvalue_0.05	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Developmental Growth Involved in Morphogenesis	0.000399896119239889	3.39805281042232
+pvalue_0.05	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Response to Inorganic Substance	0.000472837048547734	3.32528850219983
+pvalue_0.05	PD	Oligo_no_meta_analysis	msigdbSetsPruned	Go Regulation of Mitochondrial Membrane Potential	0.000536306345540854	3.27058706446323
+pvalue_0.05	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Catabolic Process	2.45310278193542e-07	6.61028425501732
+pvalue_0.05	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Macromolecule Catabolic Process	6.38180396141139e-06	5.19505654075437
+pvalue_0.05	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Process Utilizing Autophagic Mechanism	9.72945874969292e-06	5.01191131888477
+pvalue_0.05	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Protein Modification by Small Protein Conjugation or Removal	1.74825371488374e-05	4.75739554024957
+pvalue_0.05	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Proteasomal Protein Catabolic Process	8.58975183104877e-05	4.0660193833123
+pvalue_0.05	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Membrane Docking	0.000132075129841593	3.87917895369073
+pvalue_0.05	SCZ	Astro_no_meta_analysis	syngoAll	Postsynaptic Density	0.000144271021725442	3.84082089252794
+pvalue_0.05	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Regulation of Macroautophagy	0.0001585061650623	3.79995384132972
+pvalue_0.05	SCZ	Astro_no_meta_analysis	msigdbSetsPruned	Go Chromosome Organization	0.000175202272288425	3.7564602655428
+pvalue_0.05	SCZ	Astro_no_meta_analysis	syngoAll	Synapse	0.000220363948068435	3.65685945535401
+pvalue_0.05	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Midbrain Development	0.000584025199275729	3.23356841372614
+pvalue_0.05	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Cell Cycle G2 m Phase Transition	0.000894953394711345	3.04819958026699
+pvalue_0.05	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Non Canonical Wnt Signaling Pathway	0.00121730678700098	2.91459995660058
+pvalue_0.05	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Pid Plk1 Pathway	0.00130279381267166	2.88512431268694
+pvalue_0.05	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Nitric Oxide Synthase Activity	0.00150300328679226	2.82304006968975
+pvalue_0.05	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Nucleoside Monophosphate Phosphorylation	0.00187817527945931	2.72626387993476
+pvalue_0.05	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Protein Targeting to Mitochondrion	0.00225430631457701	2.64698707245494
+pvalue_0.05	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Reactome Mitotic G2 G2 m Phases	0.00244225414315896	2.61220914496583
+pvalue_0.05	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Go Transferrin Transport	0.0024765264617967	2.60615702720065
+pvalue_0.05	SCZ	EN_no_meta_analysis	msigdbSetsPruned	Pid Erbb1 Receptor Proximal Pathway	0.00287248297692358	2.54174253637338
+pvalue_0.05	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Cellular Macromolecule Localization	1.93015870020407e-05	4.7144069812568
+pvalue_0.05	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Protein Phosphorylation	2.94818682602017e-05	4.53044499878492
+pvalue_0.05	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Pid Arf6 Trafficking Pathway	3.72414455230526e-05	4.42897347026585
+pvalue_0.05	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Protein Localization to Membrane	6.25056965385087e-05	4.20408040085589
+pvalue_0.05	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Organelle Assembly	9.13340702002164e-05	4.03936718807522
+pvalue_0.05	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Reactome Gap Junction Degradation	9.44749017762256e-05	4.0246835509385
+pvalue_0.05	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Go Protein Localization to Cell Periphery	0.000150409520415506	3.82272467349796
+pvalue_0.05	SCZ	Endo_no_meta_analysis	syngoAll	Synapse Organization	0.000197764390482021	3.70385190489959
+pvalue_0.05	SCZ	Endo_no_meta_analysis	syngoAll	Process in the Synapse	0.000233068333749723	3.63251672867577
+pvalue_0.05	SCZ	Endo_no_meta_analysis	msigdbSetsPruned	Reactome Mecp2 Regulates Neuronal Receptors and Channels	0.000235089925964359	3.62876598079352
+pvalue_0.05	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Membrane Organization	5.95328108605779e-06	5.22524361161221
+pvalue_0.05	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Cellular Macromolecule Localization	1.13511768226624e-05	4.94495911106167
+pvalue_0.05	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Protein Polymerization	2.47991314836152e-05	4.60556352878984
+pvalue_0.05	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Protein Phosphorylation	4.55246334539535e-05	4.34175354228354
+pvalue_0.05	SCZ	IN_no_meta_analysis	syngoAll	Process in the Synapse	5.67464081271592e-05	4.24606162276784
+pvalue_0.05	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Protein Containing Complex Assembly	9.068111616245e-05	4.04248314293227
+pvalue_0.05	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Cellular Component Biogenesis	0.000118781240793515	3.92525214237806
+pvalue_0.05	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Regulation of Protein Containing Complex Assembly	0.000121383311655426	3.91584101799024
+pvalue_0.05	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Organelle Disassembly	0.00015599505669509	3.80688916372285
+pvalue_0.05	SCZ	IN_no_meta_analysis	msigdbSetsPruned	Go Non Canonical Wnt Signaling Pathway	0.000181759915227059	3.74050188852425
+pvalue_0.05	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Rna Processing	2.9250256018221e-06	5.5338703283232
+pvalue_0.05	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Mrna Metabolic Process	5.72573013106903e-06	5.24216912528919
+pvalue_0.05	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Organonitrogen Compound Biosynthetic Process	4.80431998608898e-05	4.31836807463201
+pvalue_0.05	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Protein Modification by Small Protein Conjugation or Removal	0.000356579086922688	3.44784413143663
+pvalue_0.05	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Pre Mirna Processing	0.000520425691121814	3.28364127237749
+pvalue_0.05	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Macromolecule Catabolic Process	0.000716999732695742	3.14448100624125
+pvalue_0.05	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Rna Splicing	0.000989161167314797	3.00473294159495
+pvalue_0.05	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Reactome Metabolism of Rna	0.00100333970408277	2.99855200154521
+pvalue_0.05	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Protein Localization to Membrane	0.00103916392140343	2.98331593988672
+pvalue_0.05	SCZ	Immune_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Glucose Transmembrane Transport	0.00109557668907362	2.9603572169387
+pvalue_0.05	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Enzyme Linked Receptor Protein Signaling Pathway	6.92980208074489e-07	6.1592791689189
+pvalue_0.05	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Cellular Macromolecule Localization	8.276170098056e-07	6.08217059196861
+pvalue_0.05	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Molecular Function	8.08461610090919e-06	5.09234059780027
+pvalue_0.05	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Neurogenesis	1.32868590610958e-05	4.87657767170236
+pvalue_0.05	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Chaperone Mediated Autophagy	1.70832904713841e-05	4.76742847463468
+pvalue_0.05	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Post Translational Protein Modification	2.71660152989789e-05	4.56597405906376
+pvalue_0.05	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Response to Abiotic Stimulus	3.45178790327314e-05	4.46195589756517
+pvalue_0.05	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Reactome Vesicle Mediated Transport	4.87421236803202e-05	4.31209555265331
+pvalue_0.05	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Regulation of Cell Differentiation	8.28496740462885e-05	4.08170919587683
+pvalue_0.05	SCZ	Mural_no_meta_analysis	msigdbSetsPruned	Go Response to Growth Factor	9.0439403588047e-05	4.04364231031688
+pvalue_0.05	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Protein Refolding	6.30415938103225e-06	5.20037281559657
+pvalue_0.05	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Positive Regulation of Receptor Recycling	4.43038662461425e-05	4.35355837273632
+pvalue_0.05	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Protein Modification by Small Protein Conjugation or Removal	9.5574449817988e-05	4.01965819335288
+pvalue_0.05	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Morphogenesis of an Epithelial Sheet	0.000120581401177302	3.91871967386232
+pvalue_0.05	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Chaperone Mediated Protein Complex Assembly	0.00015603897174168	3.80676692024429
+pvalue_0.05	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Protein Folding	0.000250822820880254	3.60063295216556
+pvalue_0.05	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Dicarboxylic Acid Biosynthetic Process	0.00038405284037732	3.4156090185868
+pvalue_0.05	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Receptor Recycling	0.000424570104090757	3.37205058974026
+pvalue_0.05	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Go Cellular Response to Dna Damage Stimulus	0.000478376855775393	3.32022983999828
+pvalue_0.05	SCZ	OPC_no_meta_analysis	msigdbSetsPruned	Reactome Vesicle Mediated Transport	0.00107708873996794	2.96774851425935
+pvalue_0.05	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Cell Cycle G2 m Phase Transition	3.67809823175077e-06	5.43437667614807
+pvalue_0.05	SCZ	Oligo_no_meta_analysis	syngoAll	Metabolism	3.91775865079303e-06	5.40696232175049
+pvalue_0.05	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Cytoskeleton Organization	4.37093850220421e-05	4.35942530386067
+pvalue_0.05	SCZ	Oligo_no_meta_analysis	syngoAll	Presynapse	6.86403195980049e-05	4.16342070302464
+pvalue_0.05	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Reactome Post Translational Protein Modification	7.81585361961131e-05	4.10702358296257
+pvalue_0.05	SCZ	Oligo_no_meta_analysis	syngoAll	Postsynaptic Ribosome	0.000167709160296032	3.77544321552528
+pvalue_0.05	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Viral Gene Expression	0.00019873695105799	3.70172137723529
+pvalue_0.05	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Go Negative Regulation of Cell Cycle G2 m Phase Transition	0.000280688936774985	3.55177470454498
+pvalue_0.05	SCZ	Oligo_no_meta_analysis	msigdbSetsPruned	Reactome Signaling by Robo Receptors	0.000292885640230534	3.53330192064178
+pvalue_0.05	SCZ	Oligo_no_meta_analysis	syngoAll	Protein Translation at Presynapse	0.000360817982856565	3.44271182572889
